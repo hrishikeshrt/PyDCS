@@ -130,7 +130,7 @@ class DigitalCorpusSanskrit:
             return line
 
     # ----------------------------------------------------------------------- #
-    # NOTE: vese == list of lines
+    # NOTE: verse == list of lines
 
     @connection
     def get_verses_from_chapter(self, chapter_id, output_type=None):
