@@ -50,11 +50,17 @@ class DigitalCorpusSanskrit:
     def get_texts(self, output_type=None):
         if output_type is None:
             output_type = self.output_type
-        fields = [Texts.id, Texts.textname, Texts.short]
+        fields = [
+            Texts.id,
+            Texts.textname,
+            Texts.short,
+            Texts.text_completed,
+            Texts.nr_of_words
+        ]
         if output_type == TYPE_DICT:
             texts = (model_to_dict(text, only=fields) for text in Texts)
         if output_type == TYPE_MODEL:
-            texts = Texts.select(*fields)
+            texts = Texts.select()
         return texts
 
     @connection
