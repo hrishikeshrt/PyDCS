@@ -369,3 +369,16 @@ class DigitalCorpusSanskrit:
             return word
 
 ###############################################################################
+
+
+def main():
+    from config import DB_URL
+    DCS = DigitalCorpusSanskrit(DB_URL)
+    return locals()
+
+
+###############################################################################
+
+
+if __name__ == '__main__':
+    locals().update(main())
