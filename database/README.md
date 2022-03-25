@@ -30,6 +30,7 @@ UPDATE word_references SET verbal_form_infinite_id = NULL WHERE verbal_form_infi
 This folder contains utility class for pythonic access to this database. The database must be imported before using the class.
 
 ### Connecting to DB
+- Copy `config.sample.py` to `config.py`
 - Details of the database login can be added to `config.py` file.
 - "peewee" is used to make the database connection. (`pip install peewee`)
    peewee is a simple and small ORM. (http://docs.peewee-orm.com/en/latest/index.html)

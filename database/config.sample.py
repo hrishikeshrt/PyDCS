@@ -6,15 +6,15 @@ Created on Tue Jun 16 17:27:12 2020
 @author: Hrishikesh Terdalkar
 """
 
-db_host = 'localhost'
-db_user = 'dcs_user'
-db_pass = ''
-db_name = 'dcs'
-db_port = 3306
+DB_HOST = 'localhost'
+DB_USER = 'dcs_user'
+DB_PASS = ''
+DB_NAME = 'dcs'
+DB_PORT = 3306
 
 ###############################################################################
 
-db_options = {
+DB_OPTIONS = {
     'charset': 'utf8',
     'sql_mode': 'PIPES_AS_CONCAT',
     'use_unicode': True
@@ -22,9 +22,9 @@ db_options = {
 
 ###############################################################################
 
-opt_str = '&'.join([f'{k}={v}' for k, v in db_options.items()])
-mysql_url = (
-    f'mysql://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}?{opt_str}'
+OPT_STR = '&'.join([f'{k}={v}' for k, v in DB_OPTIONS.items()])
+DB_URL = (
+    f'mysql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}?{OPT_STR}'
 )
 
 ###############################################################################
