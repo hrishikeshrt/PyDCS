@@ -105,9 +105,7 @@ class Texts(BaseModel):
     line = CharField(column_name='Reihe', null=True)
     digitizer = CharField(column_name='Digitalisierer', null=True)
     language_id = IntegerField(column_name='LanguageID', index=True)
-    habil_etym_time_slot = IntegerField(
-        column_name='HabilEtym_TimeSlot', null=True
-    )
+    time_slot = IntegerField(column_name='HabilEtym_TimeSlot', null=True)
     text_completed = IntegerField(column_name='TextCompleted', null=True)
     nr_of_words = IntegerField(column_name='NrOfWords', null=True)
     managed_by = CharField(column_name='ManagedBy', null=True)
