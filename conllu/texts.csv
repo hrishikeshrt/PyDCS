@@ -1,0 +1,409 @@
+id,textname,short
+1,Gheraṇḍasaṃhitā,GherS
+5,Suśrutasaṃhitā,Su
+6,Nibandhasaṃgraha,NiSaṃ
+7,Nyāyacandrikāpaṇjikā,
+8,Sūryasiddhānta,SūrSiddh
+9,G￸ḍhārthaprakāśaka,
+10,The Mādhavanidāna and its chief commentary,Meulenbeld 1974 [MādhNid]
+11,Agastīyaratnaparīkṣā,AgRPar
+12,Rājanighaṇṭu,RājNigh
+13,Mātṛkābhedatantra,MBhT
+14,Aṣṭāṅgahṛdayasaṃhitā,AHS
+15,Sarvāṅgasundarā,SarvSund
+16,Ayurvedarasāyana,
+21,Aṣṭāṅganighaṇṭu,AṣṭNigh
+24,The presence of Śiva,Kramrisch (1981)
+25,La doctrine du sacrifice dans les Brahmanas,L￩vi (1898)
+26,Mṛgendratantra,MṛgT
+27,Mṛgendraṭīkā,MṛgṬīkā
+28,Gaṇakārikā,GaṇaKār
+29,Ratnaṭīkā,GaṇaKārṬīkā
+32,Die Sāṃkhya-Philosophie,Garbe (1917)
+33,Ṛgvedavedāṅgajyotiṣa,ṚVJ
+34,Ekākṣarakoṣa,
+38,Tantrasāra,TantraS
+39,Kashmir Shaivism,
+40,Maṇimāhātmya,MaṇiMāh
+41,Les lapidaires indiens,
+42,Bhairavastava,
+43,Hymnes de Abhinavagupta,
+44,Śivasūtra,ŚSūtra
+45,Śivasūtravārtika,ŚSūtraV
+46,Vāc,
+48,Spandakārikā,SpandaKār
+49,Spandakārikānirṇaya,SpandaKārNir
+50,Kāmakuñjalatā,
+51,Smaradīpikā,
+52,Yogasūtra,YS
+55,Yoga,
+57,Rasaratnākara,RRĀ
+58,Carakasaṃhitā,Ca
+59,Amaraughaśāsana,AmarŚās
+60,Commentary on Amaraughaśāsana,AmarŚās (Komm.)
+63,Vātūlanāthasūtras,VNSūtra
+64,Vātūlanāthasūtravṛtti,VNSūtraV
+67,Kādambarīsvīkaraṇasūtramañjarī,KādSvīS
+68,Commentary on the Kādambarīsvīkaraṇasūtramañjarī,KādSvīSComm
+69,Sātvatatantra,SātT
+70,Janmamaraṇavicāra,JanMVic
+71,Kauśikasūtra,
+72,Uḍḍāmareśvaratantra,UḍḍT
+75,Ṭikanikayātrā,
+80,The Atharvaveda and the Gopathabrāhmaṇa,
+81,Gorakṣaśataka,GorŚ
+82,Gorakhnath and the Kanphata Yogins,
+84,Amarakośa,AKośa
+85,Haṭhayogapradīpikā,HYP
+90,Die Religionen Indiens,
+91,Manusmṛti,ManuS
+92,Indian lexicography,
+93,Die philosophisch-theologischen Lehren des Pāśupata-Systems,
+94,Ritualliteratur,
+95,Pāśupatasūtra,PāśupSūtra
+96,Pañcārthabhāṣya,PABh
+108,The Ātharvaṇa Upanishads,
+109,Śira'upaniṣad,ŚiraUpan
+110,Garbhopaniṣat,GarbhOp
+111,Nādabindūpaniṣat,
+112,Brahmabindūpaniṣat,
+113,Amṛtabindūpaniṣat,
+114,"Vaiṣṇavism, Śaivism, and minor religious systems.",
+115,Classical Hindu mythology,
+116,A survey of Hinduism,
+117,Religious beliefs and practices of North Indie during the early mediaeval period,
+118,Bījanighaṇṭu,BījaN
+119,Bhāgavatapurāṇa,BhāgPur
+120,Bodhicaryāvatāra,BoCA
+122,The āśrama system,
+125,Vaikhānasadharmasūtra,VaikhDharmSū
+126,Rasādhyāya,RAdhy
+127,Rasādhyāyaṭīkā,RAdhyṬ
+128,Hindu Tantrism,
+129,Śāktavijñāna,ŚāktaVij
+130,Vārāhagṛhyasūtra,VārGṛSū
+131,Amaruśataka,AmaruŚ
+136,Gobhilagṛhyasūtra,GobhGṛS
+137,Vṛddhayamasmṛti,
+139,Rasārṇavakalpa,RAK
+140,Skandapurāṇa,SkPur
+141,The alchemical body,
+142,Rasārṇava,RArṇ
+143,Rāmāyaṇa,Rām
+145,Sarvadarśanasaṃgraha,SDS
+146,Une technique du rasāyana āyurv￩dique,
+147,Yoga et alch￩mie,
+148,Āyurvedadīpikā,ĀVDīp
+149,Rasaratnasamuccaya,RRS
+150,Cuire le monde,
+151,Le discours des rem￨des au pays des ￩pices,
+154,Mahābhārata,MBh
+155,Mantra et yantra dans la m￩dicine et l'alchimie indienne,
+157,Darśan,
+158,Studies on Indian medical history.,
+159,Reflections on the basic concepts on Indian pharmacology,
+160,Rasahṛdayatantra,RHT
+161,Mugdhāvabodhinī,MuA
+162,Carakatattvapradīpikā,CaTPra
+163,Die Feldfr￼chte Indiens in ihrer geographischen Verbreitung,Feldfr￼chte
+164,The useful plants of India,Useful plants
+165,Bhāvaprakāśa,BhPr
+166,Sanskṛt-English dictionary,MW
+167,Mayamata,MayaM
+168,Toḍalatantra,ToḍalT
+175,Vṛkṣāyurveda,Das (1988)
+176,Essays in early Indian architecture.,Coomaraswamy (1992)
+177,"D￤cher, Decken und Gew￶lbe indischer Kultst￤tten und Nutzbauten.",Fischer (1974)
+178,Die altindische Stadt,
+179,Les enseignements architecturaux de l'Ajitāgama et du Rauravāgama,Dagens (1977)
+180,Paramānandīyanāmamālā,ParNāmMālā
+181,Padārthacandrikā,PadCandr
+182,Vidyādharas,
+183,Matsyapurāṇa,MPur
+184,Rājamārtaṇḍa,RājMār
+186,Early Indian secular architecture,
+189,Hitopadeśa,Hitop
+191,Kāvyādarśa,KāvĀ
+192,Rasendracintāmaṇi,RCint
+193,Ṛtusaṃhāra,ṚtuS
+194,Kirātārjunīya,Kir
+195,Tropical flowering plants,
+196,Rasasaṃketakalikā,RSK
+199,Minerals and gems in Indian alchemy,
+202,History of chemistry in ancient and medieval India,
+203,Gmelins Handbuch der anorganischen Chemie,"Gmelin (Cu, B, 1)"
+204,The International Plant Names Index (2004).,IPNI
+205,Gmelins Handbuch der anorganischen Chemie,"Gmelin (Hg, 1)"
+206,British Eighteenth-Century Chemical Terms,
+207,Webmineral,
+208,Mindat,
+209,Gmelins Handbuch der anorganischen Chemie,Gmelin (As)
+211,The Materia medica of the Hindus,Mat. Med.
+212,Rasakāmadhenu,RKDh
+213,The Oxford Hindi-English dictionary,Hindi (McGregor)
+214,T￶pferei und Tongeschirr im vedischen Indien,Rau (T￶pfe)
+215,Rasendracūḍāmaṇi,RCūM
+216,Rasārṇavam nāma rasatantram,
+219,Āyaraṅga,
+220,Kāvyālaṃkāra,KāvyAl
+225,Kāvyālaṃkāravṛtti,
+226,Comm. on the Kāvyālaṃkāravṛtti,
+227,Saṅghabhedavastu,SBhedaV
+228,Rasaratnasamuccayabodhinī,RRSBoṬ
+233,2. fiktiver Komm. zum Hitopadeśa,
+234,Kāvyasaṃgraha,KāSaṃgr
+235,Bhramarāṣṭaka,
+236,Haṃsadūta,
+237,Rasikasaṃjīvanī,RSaṃjīv
+238,Madanapālanighaṇṭu,MPālNigh
+239,Vaikhānasagṛhyasūtra,VaikhGṛS
+240,Vivāgasuyaṃ,
+241,Āyāracūlā,
+242,Anga Suttani,
+243,Gītagovinda,GītGov
+244,Rasikapriyā,RasPr
+245,W￶rterbuch Ardhamāgadhī-Deutsch,
+246,Liṅgapurāṇa,LiPur
+247,AMTest,
+248,The social and military position of the ruling caste in ancient India.,
+249,Die Lehre der Jainas,
+250,Meghadūta,Megh
+251,Bhadrabāhucarita,
+252,Ueber die Entstehung der Śvetāmbara und Digambara Sekten,
+253,Der Jainismus,
+256,Kauśikasūtradārilabhāṣya,KDār
+257,Paṃcasuttaṃ,
+258,Cakra (?) on Suśr,
+259,Hārāṇacandara on Suśr,
+260,Antagaḍadasāo,
+261,Laṅkāvatārasūtra,LAS
+262,An introduction to Buddhism.,
+263,Mūlamadhyamakārikāḥ,MMadhKār
+264,Sarvāstivāda Buddhist scholasticism,
+265,Jaiminigṛhyasūtra,JaimGṛS
+267,Balarāma im Mahābhārata,
+268,Miscellanea de operibus āyurvedicis,
+269,Miscellanea de operibus āyurvedicis (II),
+271,"On the identity of arka, an Āyurvedic class of medicines",
+272,On the Dravyaguṇasaṃgraha of Cakrapāṇidatta,
+273,Tṛtīyakaḥ phenakaḥ,
+274,Alchemy and sacred geography in medieval Deccan.,
+275,Aṣṭāṅgasaṃgraha,ASaṃ
+276,Tapas und tapasvin in den erz￤hlenden Partien des Mahābhārata,
+277,Origin and tradition of alchemy,
+278,Pottery in Vedic literature,
+279,Das Rāmāyaṇa,
+280,Śārṅgadharasaṃhitā,ŚdhSaṃh
+281,Śārṅgadharasaṃhitādīpikā,ŚSDīp
+282,Gūḍhārthadīpikā,ŚGDīp
+283,Some aspects of glass manufacturing in ancient India,
+284,The ghaṭikā of the twice-born in South Indian inscriptions,
+286,Panels of the VIIth World Sanskrit Conference,
+287,The constraints of theory in the evolution of nosological classifications,
+288,The Antagaḍa-Dasāo and Aṇuttarovavāiya-Dasāo,
+289,The heroic satī or the widow ascetic,
+290,An illustrated Ardhamagadhi dictionary,
+291,Exploration of underground water springs according to the ancient Hindus,
+292,Nāḍīparīkṣā,
+293,Nāḍīvijñāna,
+294,Ānandakanda,ĀK
+296,The origin of the life of a human being,
+297,"A history of Indian medical literature, I A",IndMedLit I A
+298,"An English Translation of the Sushruta Samhita, vol. I",
+299,Prasannapadā,
+300,Skandapurāṇa (Revākhaṇḍa),SkPur (Rkh)
+304,Viṃśatikākārikā,ViṃKār
+305,Viṃśatikāvṛtti,ViṃVṛtti
+306,Kālikāpurāṇa,KālPur
+307,Worship of the goddess according to the Kālikāpurāṇa,
+308,Vāgbhaṭas's Aṣṭāṅgahṛdayasaṃhitā,
+309,An English translation of the Suśrutasaṃhitā,
+310,Ratna Dīpikā and Ratna Śāstram,
+311,Ratnadīpikā,
+312,Pāraskaragṛhyasūtra,
+313,Hiraṇyakeśigṛhyasūtra,
+314,Rasaprakāśasudhākara,RPSudh
+315,Rasamañjarī,RMañj
+316,Khādiragṛhyasūtra,KhGṛS
+317,Khādiragṛhyasūtrarudraskandavyākhyā,
+318,Āpastambagṛhyasūtra,ĀpGṛSū
+319,Āśvalāyanagṛhyasūtra,ĀśGS
+320,Rasendrasārasaṃgraha,RSS
+321,Yogaratnākara,YRā
+322,Rasārṇavam nāma rasatantram,RasArṇ (2)
+323,Vetālapañcaviṃśatikā,VetPV
+324,Rasaratnasamuccayaṭīkā,RRSṬīkā
+325,Pāradasaṃhitā,
+326,Rasaprakāśasudhākara,RPrSudh2
+327,Indu (ad AHS),
+328,Rasaratnākara Ṛddhikhaṇḍa,RRĀṚddhi
+329,Bhāradvājagṛhyasūtra,BhārGS
+330,Baudhāyanagṛhyasūtra,BaudhGS
+331,Rasaratnākara Rasakhaṇḍa,RRĀ Rasakhaṇḍa
+332,Kaiyadevanighaṇṭu,KaiNigh
+333,Dhanvantarinighaṇṭu,DhanvNigh
+334,Rasataraṅgiṇī,RTar
+335,A concise history of science in India,
+336,Gokarṇapurāṇasāraḥ,GokPurS
+338,Viṣṇusmṛti,ViSmṛ
+342,Varāhapurāṇa,VarPur
+343,Gṛhastharatnākara,GṛRĀ
+344,Śivapurāṇa,ŚivaPur
+345,Parāśaradharmasaṃhitā,ParDhSmṛti
+346,Parāśarasmṛtiṭīkā,
+347,Kāmasūtra,KāSū
+349,"A history of Indian medical literature, II B",IndMedLit II B
+350,Kūrmapurāṇa,KūPur
+351,Sūryaśataka,SūryaŚ
+352,Sūryaśatakaṭīkā,
+353,Śāṅkhāyanagṛhyasūtra,ŚGṛS
+354,Arthaśāstra,ArthaŚ
+355,The Arthaśāstra,Arthaśāstra (Rangarajan)
+356,Nāṭyaśāstra,NāṭŚ
+357,Nāṭyaśāstravivṛti,NŚVi
+358,Kurzgefa￟tes W￶rterbuch ...,Mayrhofer
+359,Sāṃkhyakārikā,SāṃKār
+360,Rasaratnasamuccayadīpikā,RRSDīp
+361,Mānavagṛhyasūtra,MānGS
+362,Kāṭhakagṛhyasūtra,KāṭhGṛSū
+363,Sāṃkhyakārikābhāṣya,SKBh
+364,Les Strophes de Sāṃkhya (Sāṃkhyakārikā),
+365,Chāndogyopaniṣad,ChāUp
+366,Śvetāśvataropaniṣad,ŚvetāśvUp
+367,Nirukta,
+368,The Nighaṇṭu and the Nirukta,
+369,Vaiśeṣikasūtra,VaiśSū
+371,Vaiśeṣikasūtravṛtti,VaiSūVṛ
+372,Vācaspatimiśras Tattvakaumudī,
+373,Sāṃkhyatattvakaumudī,STKau
+374,Der Mondschein der Sāṃkhya-Wahrheit in deutscher ￜbersetzung,
+375,Dhanurveda,DhanV
+376,Buddhacarita,BCar
+378,Abhidharmakośa,AbhidhKo
+379,Abhidharmakośabhāṣya,AbhidhKoBh
+380,Sphuṭārthāvyākhyā,
+381,Yogasūtrabhāṣya,YSBhā
+382,Nyāyasūtra,NyāSū
+383,Nyāyasūtra,
+384,Nyāyabhāṣya,NyāBh
+385,Yājñavalkyasmṛti,YāSmṛ
+386,Nighaṇṭuśeṣa,NighŚeṣa
+388,Agnipurāṇa,AgniPur
+390,Kumārasaṃbhava,KumSaṃ
+391,Tantrākhyāyikā,TAkhy
+392,Daśakumāracarita,DKCar
+393,Gautamadharmasūtra,GautDhS
+394,Śatapathabrāhmaṇa,ŚpBr
+395,Kṛṣiparāśara,KṛṣiPar
+396,Trikāṇḍaśeṣa,TriKŚ
+397,Kranich und Reiher im Sanskrit,
+398,Abhinavacintāmaṇi,ACint
+399,Mahācīnatantra,
+400,Viṣṇupurāṇa,ViPur
+401,Kaulāvalīnirṇaya,
+402,Baudhāyanadharmasūtra,BaudhDhSū
+403,Tattvavaiśāradī,
+405,Bṛhatkathāślokasaṃgraha,BKŚS
+406,Kātyāyanasmṛti,KātySmṛ
+407,Haṃsasaṃdeśa,
+408,Tantrāloka,TĀ
+409,Tarkasaṃgraha,
+410,Nāradasmṛti,NāSmṛ
+411,Garuḍapurāṇa,GarPur
+412,Kāśikāvṛtti,
+413,Aṣṭādhyāyī,
+414,La Kāśikā-vṛtti,
+415,Acintyastava,
+416,Pāṇini's Grammatik,Pāṇini (B￶htlingk)
+418,Aṣṭādhyāyī of Pāṇini,Katre (1987)
+420,Aṣṭāvakragīta,
+421,Aitareyopaniṣad,AitUp
+423,Kṛṣṇāmṛtamahārṇava,KAM
+424,Nyāyabindu,NyāBi
+425,Haribhaktivilāsa,HBhVil
+426,Śyainikaśāstra,
+427,Translation of Gītā,
+430,Narmamālā,KṣNarm
+431,Āryāsaptaśatī,Āsapt
+433,Devīkālottarāgama,DevīĀgama
+434,Saṃvitsiddhi,SaṃSi
+435,Pañcaviṃśabrāhmaṇa,PB
+436,Śukasaptati,Śusa
+437,Caurapañcaśikā,CauP
+438,Paraśurāmakalpasūtra,
+439,Bṛhadāraṇyakopaniṣad,BĀU
+440,Śāṅkhāyanāraṇyaka,ŚāĀr
+441,Mukundamālā,MukMā
+442,Bhallaṭaśataka,BhallŚ
+443,Pavanadūta,PavDū
+444,Kokilasaṃdeśa,KokSam
+445,Śatakatraya,ŚTr
+446,Bhāratamañjarī,BhāMañj
+447,An Index to the Names in the Mahābhārata,S￶rensen
+448,Petersburger W￶rterbuch,PeW￶
+449,Abhidhānacintāmaṇi,AbhCint
+450,Ṛgveda,ṚV
+451,Der Rig-Veda. Aus dem Sanskrit ins Deutsche ￼bersetzt,
+452,A Vedic Grammar for Students,
+453,W￶rterbuch des Ṛigveda,
+454,Devīmāhātmya,
+455,Narasiṃhapurāṇa,NarasiṃPur
+456,Kathāsaritsāgara,KSS
+457,Kaṭhopaniṣad,KaṭhUp
+458,Muṇḍakopaniṣad,MuṇḍUp
+459,Kauṣītakyupaniṣad,KauṣUp
+460,Taittirīyopaniṣad,TaittUp
+461,"Upaniṣads, ￜbersetzung",
+462,Harṣacarita,
+463,Saundarānanda,SaundĀ
+464,Atharvaveda (Śaunaka),AVŚ
+465,Atharva-Veda Saṃhitā,Whitney and Lanman 1905
+466,Avadānaśataka,AvŚat
+467,Aṣṭasāhasrikā,ASāh
+469,Buddhist Hybrid Sanskrit,
+470,Śikṣāsamuccaya,ŚiSam
+471,Aitareyabrāhmaṇa,AitBr
+472,Rigveda Brahmanas,
+473,Divyāvadāna,Divyāv
+474,Etymologisches W￶rterbuch des Altindoarischen,
+475,The Rigveda. The earliest religious poetry of India,Jamison and Brereton (2014)
+476,"Viṣkali-, Name of an Accouching Deity",
+477,Hymns of the Atharva-Veda,"Bloomfield (1897, Hymns AV)"
+478,The Early Upaniṣadas,
+479,Jaiminīyabrāhmaṇa,JB
+480,Das Jaiminīya-Brāhmaṇa in Auswahl,Caland 1919 [Jaiminīyabr.]
+481,W￶rterbuch des altindischen Rituals,Mylius 1995 [Ritual]
+482,"Sanskritischer Index der jungvedischen Namen und Sachen, Teil II",Mylius 1977 [SansIx II]
+483,The Vocabulary of the Rāmāyaṇa,
+484,Nachtrag zum W￶rterbuch des altindischen Rituals,Mylius 2000 [Nachtrag]
+485,Nachtragsw￶rterbuch des Sanskrit,NWS (Schmidt)
+486,"King, Governance and Law in Ancient India",Olivelle 2013 [King]
+487,OH meanings,OH meanings
+488,Der Rigveda in Auswahl. Erster Teil: Glossar,Geldner [RV Auswahl]
+489,Lalitavistara,LalVis
+490,A Sanskrit Dictionary of Law and Statescraft,"Olivelle 2015 [Law, Statescraft]"
+491,Remarkable words from the Kāvyamīmāṃsā,Renou 1956 [Kāvyamī.]
+492,Ein buddhistisches Yogalehrbuch,Schlingloff 1964 [Yoga]
+493,Index of Viṃśatikā and Triṃśatikā,Bareau 1953 [Index]
+494,Indian Epigraphical Glossary,Sircar 1966 [Epigraphy]
+495,Baudhāyanaśrautasūtra,BaudhŚS
+496,The Kauṭilīya Arthaśāstra,"Kangle (1969, Arthaśāstra)"
+497,Ṛgvedakhilāni,ṚVKhil
+498,Encyclopaedia of Indian Temple Architecture. North India. Foundations of North Indian Style c. 250 B.C. - A.D. 1100,Meister 1988 [Temple Architecture]
+499,Maitrāyaṇīsaṃhitā,MS
+500,Das altindische Buch vom Welt- und Staatsleben,Meyer 1926 [Arthaśāstra]
+501,Vedachrestomathie,Hillebrandt 1885 [Vedachrestomathie]
+502,Atharvaprāyaścittāni,AVPr
+503,Gopathabrāhmaṇa NEW,GB
+504,Āpastambaśrautasūtra,ĀpŚS
+505,"Sanskritischer Index der jungvedischen Namen und Sachen, Teil I",Mylius 1976 [SansIx 1]
+506,Allgemeine Geschichte der Philosophie,Deussen 1894
+507,"Atharvaveda-Paippalāda, Kāṇḍa Five",Lubotsky 2002
+508,Āśvālāyanaśrautasūtra,ĀśŚS
+509,Kātyāyanaśrautasūtra,KātyŚS
+510,Taittirīyasaṃhitā,TS
+511,The Śatapatha Brāhmaṇa According to the Text of the Mādhyandina Recension,Eggeling 1894 [ŚB]
+512,Rivelex: Rigveda-Lexikon,Krisch 2006 [Rivelex]
+513,Das Śrautasūtra des Āpastamba,Caland 1928 [ĀpŚS tr.]
+514,The Veda of the Black Yajus School,"Keith [1914, TS transl.]"
+515,Atharvavedapariśiṣṭa,AVPariś
