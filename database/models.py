@@ -177,7 +177,7 @@ class VerbalFormsFinite(BaseModel):
 
 class VerbalFormsInfinite(BaseModel):
     # lexicon_id = IntegerField(index=True)
-    lexicon_id = ForeignKeyField(Lexicon, backref="finite_forms", index=True)
+    lexicon_id = ForeignKeyField(Lexicon, backref="infinite_forms", index=True)
     form = SanskritCharField(index=True, null=True)
     stem = SanskritCharField(null=True)
     tense_mode = IntegerField(index=True, null=True)
@@ -188,18 +188,18 @@ class VerbalFormsInfinite(BaseModel):
 
 
 class WordReferences(BaseModel):
-    lexicon_id = ForeignKeyField(Lexicon, backref="occurences", index=True)
+    lexicon_id = ForeignKeyField(Lexicon, backref="occurrences", index=True)
     # lexicon_id = IntegerField(index=True)
     sentence_id = ForeignKeyField(TextLines, backref="words", index=True)
     position = IntegerField(null=True)
     inner_position = IntegerField(null=True)
     # verbal_form_finite_id = IntegerField(index=True, null=True)
     verbal_form_finite_id = ForeignKeyField(
-        VerbalFormsFinite, backref="occurences", index=True, null=True
+        VerbalFormsFinite, backref="occurrences", index=True, null=True
     )
     # verbal_form_infinite_id = IntegerField(index=True, null=True)
     verbal_form_infinite_id = ForeignKeyField(
-        VerbalFormsInfinite, backref="occurences", index=True, null=True
+        VerbalFormsInfinite, backref="occurrences", index=True, null=True
     )
     absolute_position = IntegerField(index=True, null=True)
     case_number_gender = IntegerField(
