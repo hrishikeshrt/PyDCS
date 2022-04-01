@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu Sep 10 21:41:18 2020
-
-@author: Hrishikesh Terdalkar
-
-Utility Functions to deal with DCS Database (Rewritten as Class)
+DCS Class with Utility Functions to access various objects from Database
 
 peewee library's model_to_dict() function from playhouse module is used
 to create dictionary from models. It can recursively trace references and
 back-links.
 `reurse' and `backrefs' options are useful for tracing ForeignKey links.
 http://docs.peewee-orm.com/en/latest/peewee/playhouse.html?highlight=model_to_dict
+
+Created on Thu Sep 10 21:41:18 2020
+
+@author: Hrishikesh Terdalkar
 """
 
 from playhouse.db_url import connect
