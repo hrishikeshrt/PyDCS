@@ -23,16 +23,15 @@ from config import DB_URL
 ###############################################################################
 
 DCS = DigitalCorpusSanskrit(DB_URL)
-df = pd.DataFrame([
-    model_to_dict(text)
-    for text in DCS.get_texts(output_type=TYPE_MODEL)
-])
+df = pd.DataFrame(
+    [model_to_dict(text) for text in DCS.get_texts(output_type=TYPE_MODEL)]
+)
 
 # all columns
 df.to_csv(EXAMPLES_DIR / "texts_details.csv", index=False)
 
 # important columns
-fields = ['id', 'textname', 'short', 'text_completed', 'nr_of_words']
+fields = ["id", "textname", "short", "text_completed", "nr_of_words"]
 df[fields].to_csv(EXAMPLES_DIR / "texts.csv", index=False)
 
 ###############################################################################

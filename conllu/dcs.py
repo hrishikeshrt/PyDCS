@@ -26,22 +26,22 @@ TEXTS = pd.read_csv(TEXTS_PATH)
 class DigitalCorpusSanskrit:
     INTERNAL_SCHEME = sanscript.IAST
     FIELDS = [
-        'id',          # 01
-        'form',        # 02 word form or punctuation symbol
-                       # if it contains multiple words, the annotation
-                       # follows the proposals for multiword annotation
-                       # (URL: format.html#words-tokens-and-empty-nodes)
-        'lemma',       # 03 lemma or stem, lexical id of lemma is in column 11
-        'upos',        # 04
-        'xpos',        # 05 language specific POS, described in `pos.csv`
-        'feats',       # 06
-        'head',        # 07
-        'deprel',      # 08
-        'deps',        # 09
-        'misc',        # 10
-        'lemma_id',    # 11 numeric, matches first column of `dictionary.csv`
-        'unsandhied',  # 12
-        'sense_id'     # 13 numeric, matches first column of `word-senses.csv`
+        "id",  # 01
+        "form",  # 02 word form or punctuation symbol
+        # if it contains multiple words, the annotation
+        # follows the proposals for multiword annotation
+        # (URL: format.html#words-tokens-and-empty-nodes)
+        "lemma",  # 03 lemma or stem, lexical id of lemma is in column 11
+        "upos",  # 04
+        "xpos",  # 05 language specific POS, described in `pos.csv`
+        "feats",  # 06
+        "head",  # 07
+        "deprel",  # 08
+        "deps",  # 09
+        "misc",  # 10
+        "lemma_id",  # 11 numeric, matches first column of `dictionary.csv`
+        "unsandhied",  # 12
+        "sense_id",  # 13 numeric, matches first column of `word-senses.csv`
     ]
 
     def __init__(self, data_dir, scheme=sanscript.DEVANAGARI):
@@ -69,10 +69,10 @@ class DigitalCorpusSanskrit:
             return [corpus_file]
 
         if corpus_path.is_dir():
-            return natsorted(corpus_path.glob('*.conllu'), alg=ns.PATH)
+            return natsorted(corpus_path.glob("*.conllu"), alg=ns.PATH)
 
     def read_conllu(self, conllu_file, transliterate=False):
-        with open(conllu_file, encoding='utf-8') as f:
+        with open(conllu_file, encoding="utf-8") as f:
             lines = conllu.parse(f.read(), fields=self.FIELDS)
 
         if transliterate:
@@ -82,12 +82,10 @@ class DigitalCorpusSanskrit:
         return lines
 
     def transliterate(self, token):
-        transliterate_keys = ['form', 'lemma']
+        transliterate_keys = ["form", "lemma"]
         for key in transliterate_keys:
             token[key] = transliterate(
-                token[key],
-                self.INTERNAL_SCHEME,
-                self.scheme
+                token[key], self.INTERNAL_SCHEME, self.scheme
             )
         return token
 
@@ -97,12 +95,13 @@ class DigitalCorpusSanskrit:
 
 def main():
     home_dir = Path.home()
-    data_dir = home_dir / 'git' / 'oliverhellwig' / 'dcs' / 'data' / 'conllu'
+    data_dir = home_dir / "git" / "oliverhellwig" / "dcs" / "data" / "conllu"
     DCS = DigitalCorpusSanskrit(data_dir=data_dir)
     return locals()
+
 
 ###############################################################################
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     locals().update(main())

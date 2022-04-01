@@ -19,12 +19,13 @@ from playhouse.shortcuts import model_to_dict
 
 from models import database_proxy, connection
 from models import Texts, Chapters, TextLines, Lexicon, WordReferences
+
 # from models import VerbalDerivation, VerbalFormsFinite, VerbalFormsInfinite
 
 ###############################################################################
 
-TYPE_DICT = 'dict'
-TYPE_MODEL = 'model'
+TYPE_DICT = "dict"
+TYPE_MODEL = "model"
 
 ###############################################################################
 
@@ -55,7 +56,7 @@ class DigitalCorpusSanskrit:
             Texts.textname,
             Texts.short,
             Texts.text_completed,
-            Texts.nr_of_words
+            Texts.nr_of_words,
         ]
         if output_type == TYPE_DICT:
             texts = (model_to_dict(text, only=fields) for text in Texts)
@@ -109,8 +110,9 @@ class DigitalCorpusSanskrit:
         if output_type == TYPE_DICT:
             lines = (
                 model_to_dict(line, recurse=False)
-                for line in chapter.lines.order_by(TextLines.verse,
-                                                   TextLines.stanza)
+                for line in chapter.lines.order_by(
+                    TextLines.verse, TextLines.stanza
+                )
             )
         if output_type == TYPE_MODEL:
             lines = chapter.lines.order_by(TextLines.verse, TextLines.stanza)
@@ -121,8 +123,9 @@ class DigitalCorpusSanskrit:
     def get_lines_from_text(self, text_id, output_type=None):
         if output_type is None:
             output_type = self.output_type
-        for chapter in self.get_chapters_from_text(text_id,
-                                                   output_type=TYPE_MODEL):
+        for chapter in self.get_chapters_from_text(
+            text_id, output_type=TYPE_MODEL
+        ):
             yield from self.get_lines_from_chapter(chapter.id, output_type)
 
     @connection
@@ -147,7 +150,7 @@ class DigitalCorpusSanskrit:
 
         if output_type == TYPE_DICT:
             for line in lines:
-                if not verse or verse[-1]['verse'] == line.verse:
+                if not verse or verse[-1]["verse"] == line.verse:
                     verse.append(model_to_dict(line, recurse=False))
                 else:
                     yield verse
@@ -167,8 +170,9 @@ class DigitalCorpusSanskrit:
     def get_verses_from_text(self, text_id, output_type=None):
         if output_type is None:
             output_type = self.output_type
-        for chapter in self.get_chapters_from_text(text_id,
-                                                   output_type=TYPE_MODEL):
+        for chapter in self.get_chapters_from_text(
+            text_id, output_type=TYPE_MODEL
+        ):
             yield from self.get_verses_from_chapter(
                 chapter.id, output_type=output_type
             )
@@ -176,9 +180,10 @@ class DigitalCorpusSanskrit:
     # ----------------------------------------------------------------------- #
 
     @connection
-    def get_words_from_line(self, line_id, fetch_lexicon=False,
-                            output_type=None):
-        '''
+    def get_words_from_line(
+        self, line_id, fetch_lexicon=False, output_type=None
+    ):
+        """
         Get words from a Line
 
         Parameters
@@ -198,7 +203,7 @@ class DigitalCorpusSanskrit:
         -------
         words : list
             List of words (object or dict) from the specified Line
-        '''
+        """
         if output_type is None:
             output_type = self.output_type
         line = TextLines.get_by_id(line_id)
@@ -210,9 +215,9 @@ class DigitalCorpusSanskrit:
                 output = []
                 for word in words:
                     word_model = model_to_dict(word, False)
-                    word_lexicon = self.get_lexicon(word_model['lexicon_id'])
-                    word_model['word'] = word_lexicon['word']
-                    word_model['grammar'] = word_lexicon['grammar']
+                    word_lexicon = self.get_lexicon(word_model["lexicon_id"])
+                    word_model["word"] = word_lexicon["word"]
+                    word_model["grammar"] = word_lexicon["grammar"]
                     output.append(word_model)
                 return output
             else:
@@ -221,31 +226,37 @@ class DigitalCorpusSanskrit:
             return words
 
     @connection
-    def get_words_from_verse(self, lines, fetch_lexicon=False,
-                             output_type=None):
-        '''
+    def get_words_from_verse(
+        self, lines, fetch_lexicon=False, output_type=None
+    ):
+        """
         Get Words from a 'verse'
 
         A verse is a list of lines.
         In this function, a line is assumed to be in the model format.
         i.e. lines is an iterable of <TextLines: ..> objects
-        '''
+        """
         if output_type is None:
             output_type = self.output_type
-        return [word
-                for line in lines
-                for word in self.get_words_from_line(
-                        line.id,
-                        fetch_lexicon=fetch_lexicon,
-                        output_type=output_type
-                )]
+        return [
+            word
+            for line in lines
+            for word in self.get_words_from_line(
+                line.id, fetch_lexicon=fetch_lexicon, output_type=output_type
+            )
+        ]
 
     # ----------------------------------------------------------------------- #
 
     @connection
-    def get_words_from_chapter(self, chapter_id, group_verse=False,
-                               fetch_lexicon=False, output_type=None):
-        '''
+    def get_words_from_chapter(
+        self,
+        chapter_id,
+        group_verse=False,
+        fetch_lexicon=False,
+        output_type=None,
+    ):
+        """
         Get Words from a chapter
 
 
@@ -271,32 +282,33 @@ class DigitalCorpusSanskrit:
         generator
             Words from chapter, optionally grouped by verse
 
-        '''
+        """
         if output_type is None:
             output_type = self.output_type
         if group_verse:
-            verses = self.get_verses_from_chapter(chapter_id,
-                                                  output_type=TYPE_MODEL)
+            verses = self.get_verses_from_chapter(
+                chapter_id, output_type=TYPE_MODEL
+            )
             for verse in verses:
                 yield self.get_words_from_verse(
-                    verse,
-                    fetch_lexicon=fetch_lexicon,
-                    output_type=output_type
+                    verse, fetch_lexicon=fetch_lexicon, output_type=output_type
                 )
         else:
-            lines = self.get_lines_from_chapter(chapter_id,
-                                                output_type=TYPE_MODEL)
+            lines = self.get_lines_from_chapter(
+                chapter_id, output_type=TYPE_MODEL
+            )
             for line in lines:
                 yield self.get_words_from_line(
                     line.id,
                     fetch_lexicon=fetch_lexicon,
-                    output_type=output_type
+                    output_type=output_type,
                 )
 
     @connection
-    def get_words_from_text(self, text_id, group_verse=False,
-                            fetch_lexicon=False, output_type=None):
-        '''
+    def get_words_from_text(
+        self, text_id, group_verse=False, fetch_lexicon=False, output_type=None
+    ):
+        """
         Get words from a text
 
         Parameters
@@ -320,31 +332,30 @@ class DigitalCorpusSanskrit:
         ------
         generator
             Words from text, optionally grouped by verse
-        '''
+        """
         if output_type is None:
             output_type = self.output_type
         if group_verse:
             verses = self.get_verses_from_text(text_id, output_type=TYPE_MODEL)
             for verse in verses:
                 yield self.get_words_from_verse(
-                    verse,
-                    fetch_lexicon=fetch_lexicon,
-                    output_type=output_type
+                    verse, fetch_lexicon=fetch_lexicon, output_type=output_type
                 )
         else:
-            for line in self.get_lines_from_text(text_id,
-                                                 output_type=TYPE_MODEL):
+            for line in self.get_lines_from_text(
+                text_id, output_type=TYPE_MODEL
+            ):
                 yield self.get_words_from_line(
                     line.id,
                     fetch_lexicon=fetch_lexicon,
-                    output_type=output_type
+                    output_type=output_type,
                 )
 
     # ----------------------------------------------------------------------- #
 
     @connection
     def get_word(self, word_id, recurse=True, output_type=None):
-        '''
+        """
         Get details about a word from WordReferences
 
         Parameters
@@ -364,7 +375,7 @@ class DigitalCorpusSanskrit:
         -------
         word
             Word details (object or dict)
-        '''
+        """
         if output_type is None:
             output_type = self.output_type
         word = WordReferences.get_by_id(word_id)
@@ -374,11 +385,13 @@ class DigitalCorpusSanskrit:
         if output_type == TYPE_MODEL:
             return word
 
+
 ###############################################################################
 
 
 def main():
     from config import DB_URL
+
     DCS = DigitalCorpusSanskrit(DB_URL)
     return locals()
 
@@ -386,5 +399,5 @@ def main():
 ###############################################################################
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     locals().update(main())
