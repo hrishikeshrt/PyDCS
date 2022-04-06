@@ -15,14 +15,15 @@ ForeignKey constraints are added manually on the relevant columns.
 ###############################################################################
 
 from sqlalchemy import Column, Integer, String, Text, text, ForeignKey
-from sqlalchemy.orm import declarative_base, relationship, backref
+from sqlalchemy.orm import relationship, backref
+from sqlalchemy.ext.declarative import declarative_base
 
-# from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy_mixins import AllFeaturesMixin
 
 ###############################################################################
 # loading strategy
 
-backref_lazy = "joined"
+backref_lazy = "subquery"
 
 ###############################################################################
 
@@ -32,7 +33,14 @@ metadata = Base.metadata
 ###############################################################################
 
 
-class Lexicon(Base):
+class BaseModel(Base, AllFeaturesMixin):
+    __abstract__ = True
+
+
+###############################################################################
+
+
+class Lexicon(BaseModel):
     __tablename__ = "lexicon"
     id = Column(
         Integer, primary_key=True, comment="= Access.Wortliste.ID, permanent"
@@ -49,7 +57,7 @@ class Lexicon(Base):
 ###############################################################################
 
 
-class Texts(Base):
+class Texts(BaseModel):
     __tablename__ = "texts"
     id = Column("ID", Integer, primary_key=True)
     textname = Column("Textname", String(255), nullable=False, index=True)
@@ -75,11 +83,11 @@ class Texts(Base):
     secondary_literature = Column(Integer)
 
 
-class Chapters(Base):
+class Chapters(BaseModel):
     __tablename__ = "chapters"
     id = Column(Integer, primary_key=True)
     text_id = Column(
-        Integer, ForeignKey("texts.id"), nullable=False, index=True
+        Integer, ForeignKey("texts.ID"), nullable=False, index=True
     )
     name = Column(String(255), index=True)
     position = Column(Integer, nullable=False)
@@ -92,7 +100,7 @@ class Chapters(Base):
     )
 
 
-class TextLines(Base):
+class TextLines(BaseModel):
     __tablename__ = "text_lines"
     id = Column(Integer, primary_key=True)
     chapter_id = Column(
@@ -108,7 +116,7 @@ class TextLines(Base):
     )
 
 
-class VerbalDerivation(Base):
+class VerbalDerivation(BaseModel):
     __tablename__ = "verbal_derivation"
     id = Column(Integer, nullable=False, index=True, comment="not permanent")
     lexicon_id_parent = Column(
@@ -128,7 +136,7 @@ class VerbalDerivation(Base):
     dummy = Column(Integer, primary_key=True)
 
 
-class VerbalFormsFinite(Base):
+class VerbalFormsFinite(BaseModel):
     __tablename__ = "verbal_forms_finite"
     id = Column(
         Integer,
@@ -151,7 +159,7 @@ class VerbalFormsFinite(Base):
     )
 
 
-class VerbalFormsInfinite(Base):
+class VerbalFormsInfinite(BaseModel):
     __tablename__ = "verbal_forms_infinite"
     id = Column(
         Integer,
@@ -175,7 +183,7 @@ class VerbalFormsInfinite(Base):
     )
 
 
-class WordReferences(Base):
+class WordReferences(BaseModel):
     __tablename__ = "word_references"
     id = Column(
         Integer,
@@ -244,7 +252,7 @@ class WordReferences(Base):
 ###############################################################################
 
 
-class Meanings(Base):
+class Meanings(BaseModel):
     __tablename__ = "meanings"
     id = Column(Integer, primary_key=True)
     lexicon_id = Column(
@@ -257,7 +265,7 @@ class Meanings(Base):
     )
 
 
-class MeaningSource(Base):
+class MeaningSource(BaseModel):
     __tablename__ = "meaning_source"
     id = Column(Integer, primary_key=True)
     meaning_id = Column(Integer, nullable=False, index=True)
@@ -270,14 +278,14 @@ class MeaningSource(Base):
 ###############################################################################
 
 
-class Headlines(Base):
+class Headlines(BaseModel):
     __tablename__ = "headlines"
     id_set = Column("IDSatz", Integer, nullable=False, index=True)
     headline = Column(String(255))
     dummy = Column(Integer, primary_key=True)
 
 
-class Phrasesxtflags(Base):
+class Phrasesxtflags(BaseModel):
     __tablename__ = "phrasesxtflags"
     id_phrase = Column("IDPhrase", Integer, nullable=False, index=True)
     position = Column("Position", Integer)
@@ -285,7 +293,7 @@ class Phrasesxtflags(Base):
     dummy = Column(Integer, primary_key=True)
 
 
-class Topics(Base):
+class Topics(BaseModel):
     __tablename__ = "topics"
     id = Column(Integer, primary_key=True, comment="=Themen.ID")
     parent_id = Column(Integer, index=True)
@@ -293,7 +301,7 @@ class Topics(Base):
     added_manually = Column(Integer, nullable=False, server_default=text("0"))
 
 
-class TopicsReferences(Base):
+class TopicsReferences(BaseModel):
     __tablename__ = "topics_references"
     id = Column(Integer, primary_key=True)
     topic_id = Column(Integer, index=True)
