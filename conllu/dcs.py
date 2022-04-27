@@ -132,8 +132,10 @@ class DigitalCorpusSanskrit:
         return lines
 
     def transliterate(self, token):
-        transliterate_keys = ["form", "lemma"]
+        transliterate_keys = ["form", "lemma", "unsandhied"]
         for key in transliterate_keys:
+            if key not in token:
+                continue
             token[key] = transliterate(
                 token[key], self.INTERNAL_SCHEME, self.scheme
             )
