@@ -17,8 +17,44 @@ from indic_transliteration.sanscript import transliterate
 
 ###############################################################################
 
-TEXTS_PATH = "texts.csv"
+BASE_DIR = Path(__file__).parent
+TEXTS_PATH = BASE_DIR / "texts.csv"
 TEXTS = pd.read_csv(TEXTS_PATH)
+
+###############################################################################
+
+
+class CSVData:
+    def __init__(
+        self,
+        csv_path: str or Path,
+        separator: str = ",",
+        index_column: str = None,
+    ):
+        self.path = csv_path
+        self.separator = separator
+        self.data = pd.read_csv(csv_path, sep=separator, keep_default_na=False)
+        if index_column:
+            self.data = self.data.set_index(index_column)
+
+    def get(self, id: int):
+        try:
+            return self.data.loc[id]
+        except KeyError:
+            pass
+
+    def search(self, **kwargs):
+        query = " and ".join(
+            f"{key}.str.match('{value}')" for key, value in kwargs.items()
+        )
+        return self.data.query(query)
+
+    def __iter__(self):
+        yield from self.data.iterrows()
+
+    def __repr__(self):
+        return repr(self.data)
+
 
 ###############################################################################
 
@@ -32,8 +68,8 @@ class DigitalCorpusSanskrit:
         # follows the proposals for multiword annotation
         # (URL: format.html#words-tokens-and-empty-nodes)
         "lemma",  # 03 lemma or stem, lexical id of lemma is in column 11
-        "upos",  # 04
-        "xpos",  # 05 language specific POS, described in `pos.csv`
+        "upos",  # 04 universal POS tags
+        "xpos",  # 05 language specific POS tags, described in `pos.csv`
         "feats",  # 06
         "head",  # 07
         "deprel",  # 08
@@ -48,9 +84,23 @@ class DigitalCorpusSanskrit:
         self.data_dir = Path(data_dir)
         self.scheme = scheme
 
-    def get_corpus(self, corpus_id_or_name):
+        dictionary_path = self.data_dir / "lookup" / "dictionary.csv"
+        wordsenses_path = self.data_dir / "lookup" / "word-senses.csv"
+        pos_path = self.data_dir / "lookup" / "pos.csv"
+
+        self.dictionary = CSVData(
+            dictionary_path, separator="\t", index_column="id"
+        )
+        self.wordsenses = CSVData(
+            wordsenses_path, separator="\t", index_column="id"
+        )
+        self.pos = CSVData(pos_path, separator="\t", index_column="POS")
+
+    def get_corpus(self, corpus_id_or_name: str, transliterate: bool = False):
         for conllu_file in self.get_corpus_files(corpus_id_or_name):
-            yield from self.read_conllu(conllu_file)
+            yield from self.read_conllu(
+                conllu_file, transliterate=transliterate
+            )
 
     def get_corpus_files(self, corpus_id_or_name):
         record = TEXTS.query(f"id == {corpus_id_or_name}")
@@ -71,7 +121,7 @@ class DigitalCorpusSanskrit:
         if corpus_path.is_dir():
             return natsorted(corpus_path.glob("*.conllu"), alg=ns.PATH)
 
-    def read_conllu(self, conllu_file, transliterate=False):
+    def read_conllu(self, conllu_file, transliterate: bool = False):
         with open(conllu_file, encoding="utf-8") as f:
             lines = conllu.parse(f.read(), fields=self.FIELDS)
 
