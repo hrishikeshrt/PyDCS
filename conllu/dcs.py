@@ -105,7 +105,7 @@ class DigitalCorpusSanskrit:
     def get_corpus_files(self, corpus_id_or_name):
         record = TEXTS.query(f"id == {corpus_id_or_name}")
         if record.empty:
-            record = TEXTS.query(f"textname == {corpus_id_or_name}")
+            record = TEXTS.query(f"textname == '{corpus_id_or_name}'")
 
         if record.empty:
             print(f"Corpus not found: id/texname: '{corpus_id_or_name}'.")
