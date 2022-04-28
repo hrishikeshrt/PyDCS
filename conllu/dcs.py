@@ -82,6 +82,12 @@ class DigitalCorpusSanskrit:
         "unsandhied",  # 12
         "sense_id",  # 13 numeric, matches first column of `word-senses.csv`
     ]
+    METADATA_INFO = {
+        "text_line": "text",
+        "text_line_id": "line_id",
+        "text_line_counter": "chapter_verse_id",
+        "text_line_subcounter": "verse_line_id",
+    }
 
     def __init__(self, data_dir, scheme=sanscript.DEVANAGARI):
         self.data_dir = Path(data_dir)
@@ -141,7 +147,11 @@ class DigitalCorpusSanskrit:
 
         conllu_lines = [
             line
-            for line in conllu.parse(content, fields=self.FIELDS)
+            for line in conllu.parse(
+                content,
+                fields=self.FIELDS,
+                metadata_parsers={"__fallback__": self._metadata_parser}
+            )
             if line
         ]
 
@@ -168,8 +178,28 @@ class DigitalCorpusSanskrit:
             )
         return token
 
+    def _metadata_parser(self, k: str, v: str) -> Tuple[str, str]:
+        """Metadata Parser for `conllu.parse()`"""
+        parts = k.split(":", 1)
+
+        key = parts[0].strip()
+        value = parts[1].strip()
+
+        key = self.METADATA_INFO.get(key, key)
+
+        if key == "text" and self.scheme != self.INTERNAL_SCHEME:
+            value = transliterate(value, self.INTERNAL_SCHEME, self.scheme)
+
+        if key in ["line_id", "chapter_verse_id", "verse_line_id"]:
+            value = parse_int(value)
+
+        return key, value
+
     def parse_metadata(self, content: str) -> Dict:
         """Parse Metadata from Comments
+
+        Deprecated: Parse metadata with `conllu.parse()` by defining a custom
+        parser (See: `_metadata_parser()`)
 
         Parameters
         ----------
