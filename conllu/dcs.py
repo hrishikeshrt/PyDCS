@@ -99,11 +99,9 @@ class DigitalCorpusSanskrit:
         )
         self.pos = CSVData(pos_path, separator="\t", index_column="POS")
 
-    def get_corpus(self, corpus_id_or_name: str, transliterate: bool = False):
+    def get_corpus(self, corpus_id_or_name: str):
         for conllu_file in self.get_corpus_files(corpus_id_or_name):
-            yield from self.read_conllu(
-                conllu_file, transliterate=transliterate
-            )
+            yield from self.parse_conllu(conllu_file)
 
     def get_corpus_files(self, corpus_id_or_name):
         record = TEXTS.query(f"id == {corpus_id_or_name}")
@@ -124,17 +122,43 @@ class DigitalCorpusSanskrit:
         if corpus_path.is_dir():
             return natsorted(corpus_path.glob("*.conllu"), alg=ns.PATH)
 
-    def read_conllu(self, conllu_file, transliterate: bool = False):
-        with open(conllu_file, encoding="utf-8") as f:
-            lines = conllu.parse(f.read(), fields=self.FIELDS)
+    def parse_conllu(self, dcs_conllu_file: str or Path):
+        """Parse a DCS CoNLL-U File
 
-        if transliterate:
-            for line in lines:
-                for token in line:
-                    token = self.transliterate(token)
-        return lines
+        Parameters
+        ----------
+        dcs_conllu_file : str or Path
+            Path to the DCS CoNLL-U File
 
-    def transliterate(self, token):
+        Returns
+        -------
+        list
+            List of lines
+        """
+
+        with open(dcs_conllu_file, encoding="utf-8") as f:
+            content = f.read()
+
+        conllu_lines = [
+            line
+            for line in conllu.parse(content, fields=self.FIELDS)
+            if line
+        ]
+
+        if self.scheme != self.INTERNAL_SCHEME:
+            for textline in conllu_lines:
+                for token in textline:
+                    token = self.transliterate_token(token)
+
+        # ------------------------------------------------------------------- #
+
+        return conllu_lines
+
+    def transliterate_token(self, token):
+        """Transliterate Token"""
+        if self.scheme == self.INTERNAL_SCHEME:
+            return token
+
         transliterate_keys = ["form", "lemma", "unsandhied"]
         for key in transliterate_keys:
             if key not in token:
