@@ -7,6 +7,7 @@ Created on Mon May 10 15:27:51 2021
 """
 
 from pathlib import Path
+from typing import Dict, Tuple
 
 import conllu
 import pandas as pd
@@ -14,6 +15,8 @@ from natsort import natsorted, ns
 
 from indic_transliteration import sanscript
 from indic_transliteration.sanscript import transliterate
+
+from utils import parse_int
 
 ###############################################################################
 
@@ -141,6 +144,76 @@ class DigitalCorpusSanskrit:
             )
         return token
 
+    def parse_metadata(self, content: str) -> Dict:
+        """Parse Metadata from Comments
+
+        Parameters
+        ----------
+        content : str
+            Entire Content of DCS CoNLL-U File
+
+        Returns
+        -------
+        Dict
+            Metadata in a nested dictionary
+        """
+
+        # ------------------------------------------------------------------- #
+        # Parse Metadata from Comments
+
+        metadata = {}
+        chapters = []
+        chapter = None
+        line = None
+
+        for textline in content.split("\n"):
+            # --------------------------------------------------------------- #
+            # Chapter
+
+            if textline.startswith("## chapter:"):
+                if chapter:
+                    chapters.append(chapter)
+
+                chapter_title = textline.split(":", 1)[1].strip()
+                chapter = {
+                    "id": None,
+                    "title": chapter_title,
+                    "lines": []
+                }
+
+            if textline.startswith("## chapter_id:"):
+                chapter["id"] = parse_int(textline.split(":", 1)[1])
+
+            # --------------------------------------------------------------- #
+            # Lines
+
+            if textline.startswith("# text_line:"):
+                line = {}
+                line["text"] = textline.split(":", 1)[1].strip()
+                if self.scheme != self.INTERNAL_SCHEME:
+                    line["text"] = transliterate(
+                        line["text"],
+                        self.INTERNAL_SCHEME,
+                        self.scheme
+                    )
+            if textline.startswith("# text_line_id:"):
+                line_id = parse_int(textline.split(":", 1)[1])
+                line["line_id"] = line_id
+            if textline.startswith("# text_line_counter:"):
+                verse_id = parse_int(textline.split(":", 1)[1])
+                line["chapter_verse_id"] = verse_id
+            if textline.startswith("# text_line_subcounter:"):
+                verse_line_id = parse_int(textline.split(":", 1)[1])
+                line["verse_line_id"] = verse_line_id
+                chapter["lines"].append(line)
+
+        # Append Final Chapter
+        chapters.append(chapter)
+
+        # ------------------------------------------------------------------- #
+
+        metadata["chapters"] = chapters
+        return metadata
 
 ###############################################################################
 
