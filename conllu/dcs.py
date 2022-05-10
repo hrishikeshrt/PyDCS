@@ -157,12 +157,28 @@ class DigitalCorpusSanskrit:
 
         if self.scheme != self.INTERNAL_SCHEME:
             for textline in conllu_lines:
+                textline.metadata = self.transliterate_metadata(
+                    textline.metadata
+                )
                 for token in textline:
                     token = self.transliterate_token(token)
 
         # ------------------------------------------------------------------- #
 
         return conllu_lines
+
+    def transliterate_metadata(self, metadata):
+        """Transliterate Metadata"""
+        if self.scheme == self.INTERNAL_SCHEME:
+            return metadata
+        transliterate_keys = ["text"]
+        for key in transliterate_keys:
+            if key not in metadata:
+                continue
+            metadata[key] = transliterate(
+                metadata[key], self.INTERNAL_SCHEME, self.scheme
+            )
+        return metadata
 
     def transliterate_token(self, token):
         """Transliterate Token"""
@@ -186,9 +202,6 @@ class DigitalCorpusSanskrit:
         value = parts[1].strip()
 
         key = self.METADATA_INFO.get(key, key)
-
-        if key == "text" and self.scheme != self.INTERNAL_SCHEME:
-            value = transliterate(value, self.INTERNAL_SCHEME, self.scheme)
 
         if key in ["line_id", "chapter_verse_id", "verse_line_id"]:
             value = parse_int(value)
