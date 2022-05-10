@@ -155,6 +155,12 @@ class DigitalCorpusSanskrit:
             if line
         ]
 
+        # ------------------------------------------------------------------- #
+
+        return self.transliterate_lines(conllu_lines)
+
+    def transliterate_lines(self, conllu_lines):
+        """Transliterate CoNLL-U Data"""
         if self.scheme != self.INTERNAL_SCHEME:
             for textline in conllu_lines:
                 textline.metadata = self.transliterate_metadata(
@@ -162,9 +168,6 @@ class DigitalCorpusSanskrit:
                 )
                 for token in textline:
                     token = self.transliterate_token(token)
-
-        # ------------------------------------------------------------------- #
-
         return conllu_lines
 
     def transliterate_metadata(self, metadata):
