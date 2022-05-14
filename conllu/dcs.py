@@ -128,8 +128,39 @@ class DigitalCorpusSanskrit:
         if corpus_path.is_dir():
             return natsorted(corpus_path.glob("*.conllu"), alg=ns.PATH)
 
-    def parse_conllu(self, dcs_conllu_file: str or Path):
-        """Parse a DCS CoNLL-U File
+    # ----------------------------------------------------------------------- #
+
+    def parse_conllu(self, dcs_conllu_content: str):
+        """
+        Parse a DCS CoNLL-U String
+
+        Parameters
+        ----------
+        dcs_conllu_content : str
+            Valid string of DCS CoNLL-U Data
+
+        Returns
+        -------
+        list
+            List of lines
+        """
+        conllu_lines = [
+            line
+            for line in conllu.parse(
+                dcs_conllu_content,
+                fields=self.FIELDS,
+                metadata_parsers={"__fallback__": self._metadata_parser}
+            )
+            if line
+        ]
+
+        return self.transliterate_lines(conllu_lines)
+
+    # ----------------------------------------------------------------------- #
+
+    def parse_conllu_file(self, dcs_conllu_file: str or Path):
+        """
+        Parse a DCS CoNLL-U File
 
         Parameters
         ----------
@@ -145,19 +176,9 @@ class DigitalCorpusSanskrit:
         with open(dcs_conllu_file, encoding="utf-8") as f:
             content = f.read()
 
-        conllu_lines = [
-            line
-            for line in conllu.parse(
-                content,
-                fields=self.FIELDS,
-                metadata_parsers={"__fallback__": self._metadata_parser}
-            )
-            if line
-        ]
+        return self.parse_conllu(content)
 
-        # ------------------------------------------------------------------- #
-
-        return self.transliterate_lines(conllu_lines)
+    # ----------------------------------------------------------------------- #
 
     def transliterate_lines(self, conllu_lines):
         """Transliterate CoNLL-U Data"""
