@@ -7,16 +7,11 @@ Created on Mon May 10 15:27:51 2021
 """
 
 from pathlib import Path
-from typing import Dict, Tuple
 
-import conllu
 import pandas as pd
 from natsort import natsorted, ns
 
-from indic_transliteration import sanscript
-from indic_transliteration.sanscript import transliterate
-
-from utils import parse_int
+from utils import CoNLLUParser
 
 ###############################################################################
 
@@ -62,36 +57,10 @@ class CSVData:
 ###############################################################################
 
 
-class DigitalCorpusSanskrit:
-    INTERNAL_SCHEME = sanscript.IAST
-    FIELDS = [
-        "id",  # 01
-        "form",  # 02 word form or punctuation symbol
-        # if it contains multiple words, the annotation
-        # follows the proposals for multiword annotation
-        # (URL: format.html#words-tokens-and-empty-nodes)
-        "lemma",  # 03 lemma or stem, lexical id of lemma is in column 11
-        "upos",  # 04 universal POS tags
-        "xpos",  # 05 language specific POS tags, described in `pos.csv`
-        "feats",  # 06
-        "head",  # 07
-        "deprel",  # 08
-        "deps",  # 09
-        "misc",  # 10
-        "lemma_id",  # 11 numeric, matches first column of `dictionary.csv`
-        "unsandhied",  # 12
-        "sense_id",  # 13 numeric, matches first column of `word-senses.csv`
-    ]
-    METADATA_INFO = {
-        "text_line": "text",
-        "text_line_id": "line_id",
-        "text_line_counter": "chapter_verse_id",
-        "text_line_subcounter": "verse_line_id",
-    }
-
-    def __init__(self, data_dir, scheme=sanscript.DEVANAGARI):
+class DigitalCorpusSanskrit(CoNLLUParser):
+    def __init__(self, data_dir, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.data_dir = Path(data_dir)
-        self.scheme = scheme
 
         dictionary_path = self.data_dir / "lookup" / "dictionary.csv"
         wordsenses_path = self.data_dir / "lookup" / "word-senses.csv"
@@ -128,183 +97,6 @@ class DigitalCorpusSanskrit:
         if corpus_path.is_dir():
             return natsorted(corpus_path.glob("*.conllu"), alg=ns.PATH)
 
-    # ----------------------------------------------------------------------- #
-
-    def parse_conllu(self, dcs_conllu_content: str):
-        """
-        Parse a DCS CoNLL-U String
-
-        Parameters
-        ----------
-        dcs_conllu_content : str
-            Valid string of DCS CoNLL-U Data
-
-        Returns
-        -------
-        list
-            List of lines
-        """
-        conllu_lines = [
-            line
-            for line in conllu.parse(
-                dcs_conllu_content,
-                fields=self.FIELDS,
-                metadata_parsers={"__fallback__": self._metadata_parser}
-            )
-            if line
-        ]
-
-        return self.transliterate_lines(conllu_lines)
-
-    # ----------------------------------------------------------------------- #
-
-    def parse_conllu_file(self, dcs_conllu_file: str or Path):
-        """
-        Parse a DCS CoNLL-U File
-
-        Parameters
-        ----------
-        dcs_conllu_file : str or Path
-            Path to the DCS CoNLL-U File
-
-        Returns
-        -------
-        list
-            List of lines
-        """
-
-        with open(dcs_conllu_file, encoding="utf-8") as f:
-            content = f.read()
-
-        return self.parse_conllu(content)
-
-    # ----------------------------------------------------------------------- #
-
-    def transliterate_lines(self, conllu_lines):
-        """Transliterate CoNLL-U Data"""
-        if self.scheme != self.INTERNAL_SCHEME:
-            for textline in conllu_lines:
-                textline.metadata = self.transliterate_metadata(
-                    textline.metadata
-                )
-                for token in textline:
-                    token = self.transliterate_token(token)
-        return conllu_lines
-
-    def transliterate_metadata(self, metadata):
-        """Transliterate Metadata"""
-        if self.scheme == self.INTERNAL_SCHEME:
-            return metadata
-        transliterate_keys = ["text"]
-        for key in transliterate_keys:
-            if key not in metadata:
-                continue
-            metadata[key] = transliterate(
-                metadata[key], self.INTERNAL_SCHEME, self.scheme
-            )
-        return metadata
-
-    def transliterate_token(self, token):
-        """Transliterate Token"""
-        if self.scheme == self.INTERNAL_SCHEME:
-            return token
-
-        transliterate_keys = ["form", "lemma", "unsandhied"]
-        for key in transliterate_keys:
-            if key not in token:
-                continue
-            token[key] = transliterate(
-                token[key], self.INTERNAL_SCHEME, self.scheme
-            )
-        return token
-
-    def _metadata_parser(self, k: str, v: str) -> Tuple[str, str]:
-        """Metadata Parser for `conllu.parse()`"""
-        parts = k.split(":", 1)
-
-        key = parts[0].strip()
-        value = parts[1].strip()
-
-        key = self.METADATA_INFO.get(key, key)
-
-        if key in ["line_id", "chapter_verse_id", "verse_line_id"]:
-            value = parse_int(value)
-
-        return key, value
-
-    def parse_metadata(self, content: str) -> Dict:
-        """Parse Metadata from Comments
-
-        Deprecated: Parse metadata with `conllu.parse()` by defining a custom
-        parser (See: `_metadata_parser()`)
-
-        Parameters
-        ----------
-        content : str
-            Entire Content of DCS CoNLL-U File
-
-        Returns
-        -------
-        Dict
-            Metadata in a nested dictionary
-        """
-
-        # ------------------------------------------------------------------- #
-        # Parse Metadata from Comments
-
-        metadata = {}
-        chapters = []
-        chapter = None
-        line = None
-
-        for textline in content.split("\n"):
-            # --------------------------------------------------------------- #
-            # Chapter
-
-            if textline.startswith("## chapter:"):
-                if chapter:
-                    chapters.append(chapter)
-
-                chapter_title = textline.split(":", 1)[1].strip()
-                chapter = {
-                    "id": None,
-                    "title": chapter_title,
-                    "lines": []
-                }
-
-            if textline.startswith("## chapter_id:"):
-                chapter["id"] = parse_int(textline.split(":", 1)[1])
-
-            # --------------------------------------------------------------- #
-            # Lines
-
-            if textline.startswith("# text_line:"):
-                line = {}
-                line["text"] = textline.split(":", 1)[1].strip()
-                if self.scheme != self.INTERNAL_SCHEME:
-                    line["text"] = transliterate(
-                        line["text"],
-                        self.INTERNAL_SCHEME,
-                        self.scheme
-                    )
-            if textline.startswith("# text_line_id:"):
-                line_id = parse_int(textline.split(":", 1)[1])
-                line["line_id"] = line_id
-            if textline.startswith("# text_line_counter:"):
-                verse_id = parse_int(textline.split(":", 1)[1])
-                line["chapter_verse_id"] = verse_id
-            if textline.startswith("# text_line_subcounter:"):
-                verse_line_id = parse_int(textline.split(":", 1)[1])
-                line["verse_line_id"] = verse_line_id
-                chapter["lines"].append(line)
-
-        # Append Final Chapter
-        chapters.append(chapter)
-
-        # ------------------------------------------------------------------- #
-
-        metadata["chapters"] = chapters
-        return metadata
 
 ###############################################################################
 
