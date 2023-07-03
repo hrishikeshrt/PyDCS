@@ -1,409 +1,254 @@
-id,textname,short,text_completed,nr_of_words
-1,Gheraṇḍasaṃhitā,GherS,1,5484
-5,Suśrutasaṃhitā,Su,0,146509
-6,Nibandhasaṃgraha,NiSaṃ,0,7335
-7,Nyāyacandrikāpaṇjikā,,0,0
-8,Sūryasiddhānta,SūrSiddh,0,2138
-9,G￸ḍhārthaprakāśaka,,0,0
-10,The Mādhavanidāna and its chief commentary,Meulenbeld 1974 [MādhNid],0,0
-11,Agastīyaratnaparīkṣā,AgRPar,0,604
-12,Rājanighaṇṭu,RājNigh,1,49984
-13,Mātṛkābhedatantra,MBhT,1,7842
-14,Aṣṭāṅgahṛdayasaṃhitā,AHS,1,107404
-15,Sarvāṅgasundarā,SarvSund,0,9063
-16,Ayurvedarasāyana,,0,4104
-21,Aṣṭāṅganighaṇṭu,AṣṭNigh,1,4770
-24,The presence of Śiva,Kramrisch (1981),0,0
-25,La doctrine du sacrifice dans les Brahmanas,L￩vi (1898),0,0
-26,Mṛgendratantra,MṛgT,0,3308
-27,Mṛgendraṭīkā,MṛgṬīkā,0,22075
-28,Gaṇakārikā,GaṇaKār,0,95
-29,Ratnaṭīkā,GaṇaKārṬīkā,0,5390
-32,Die Sāṃkhya-Philosophie,Garbe (1917),0,0
-33,Ṛgvedavedāṅgajyotiṣa,ṚVJ,0,185
-34,Ekākṣarakoṣa,,0,0
-38,Tantrasāra,TantraS,0,14143
-39,Kashmir Shaivism,,0,0
-40,Maṇimāhātmya,MaṇiMāh,0,913
-41,Les lapidaires indiens,,0,0
-42,Bhairavastava,,1,204
-43,Hymnes de Abhinavagupta,,0,0
-44,Śivasūtra,ŚSūtra,1,297
-45,Śivasūtravārtika,ŚSūtraV,0,5339
-46,Vāc,,0,0
-48,Spandakārikā,SpandaKār,0,750
-49,Spandakārikānirṇaya,SpandaKārNir,0,10219
-50,Kāmakuñjalatā,,0,0
-51,Smaradīpikā,,0,921
-52,Yogasūtra,YS,1,1137
-55,Yoga,,0,0
-57,Rasaratnākara,RRĀ,1,52856
-58,Carakasaṃhitā,Ca,0,94635
-59,Amaraughaśāsana,AmarŚās,1,1024
-60,Commentary on Amaraughaśāsana,AmarŚās (Komm.),0,673
-63,Vātūlanāthasūtras,VNSūtra,1,84
-64,Vātūlanāthasūtravṛtti,VNSūtraV,1,2058
-67,Kādambarīsvīkaraṇasūtramañjarī,KādSvīS,1,265
-68,Commentary on the Kādambarīsvīkaraṇasūtramañjarī,KādSvīSComm,0,1899
-69,Sātvatatantra,SātT,1,10046
-70,Janmamaraṇavicāra,JanMVic,1,3251
-71,Kauśikasūtra,,0,5209
-72,Uḍḍāmareśvaratantra,UḍḍT,1,10919
-75,Ṭikanikayātrā,,1,1626
-80,The Atharvaveda and the Gopathabrāhmaṇa,,0,0
-81,Gorakṣaśataka,GorŚ,1,1471
-82,Gorakhnath and the Kanphata Yogins,,0,0
-84,Amarakośa,AKośa,0,11960
-85,Haṭhayogapradīpikā,HYP,1,5659
-90,Die Religionen Indiens,,0,0
-91,Manusmṛti,ManuS,1,37625
-92,Indian lexicography,,0,0
-93,Die philosophisch-theologischen Lehren des Pāśupata-Systems,,0,0
-94,Ritualliteratur,,0,0
-95,Pāśupatasūtra,PāśupSūtra,1,493
-96,Pañcārthabhāṣya,PABh,1,23164
-108,The Ātharvaṇa Upanishads,,0,0
-109,Śira'upaniṣad,ŚiraUpan,1,1577
-110,Garbhopaniṣat,GarbhOp,1,559
-111,Nādabindūpaniṣat,,0,272
-112,Brahmabindūpaniṣat,,1,320
-113,Amṛtabindūpaniṣat,,0,105
-114,"Vaiṣṇavism, Śaivism, and minor religious systems.",,0,0
-115,Classical Hindu mythology,,0,0
-116,A survey of Hinduism,,0,0
-117,Religious beliefs and practices of North Indie during the early mediaeval period,,0,0
-118,Bījanighaṇṭu,BījaN,0,770
-119,Bhāgavatapurāṇa,BhāgPur,0,77576
-120,Bodhicaryāvatāra,BoCA,1,13712
-122,The āśrama system,,0,0
-125,Vaikhānasadharmasūtra,VaikhDharmSū,1,4899
-126,Rasādhyāya,RAdhy,1,6719
-127,Rasādhyāyaṭīkā,RAdhyṬ,0,7769
-128,Hindu Tantrism,,0,0
-129,Śāktavijñāna,ŚāktaVij,1,427
-130,Vārāhagṛhyasūtra,VārGṛSū,0,4602
-131,Amaruśataka,AmaruŚ,1,3221
-136,Gobhilagṛhyasūtra,GobhGṛS,0,1317
-137,Vṛddhayamasmṛti,,0,445
-139,Rasārṇavakalpa,RAK,0,4796
-140,Skandapurāṇa,SkPur,0,16429
-141,The alchemical body,,0,0
-142,Rasārṇava,RArṇ,1,32040
-143,Rāmāyaṇa,Rām,1,261044
-145,Sarvadarśanasaṃgraha,SDS,0,1056
-146,Une technique du rasāyana āyurv￩dique,,0,0
-147,Yoga et alch￩mie,,0,0
-148,Āyurvedadīpikā,ĀVDīp,0,38742
-149,Rasaratnasamuccaya,RRS,0,28144
-150,Cuire le monde,,0,0
-151,Le discours des rem￨des au pays des ￩pices,,0,0
-154,Mahābhārata,MBh,0,1145816
-155,Mantra et yantra dans la m￩dicine et l'alchimie indienne,,0,0
-157,Darśan,,0,0
-158,Studies on Indian medical history.,,0,0
-159,Reflections on the basic concepts on Indian pharmacology,,0,0
-160,Rasahṛdayatantra,RHT,1,8147
-161,Mugdhāvabodhinī,MuA,0,30128
-162,Carakatattvapradīpikā,CaTPra,0,121
-163,Die Feldfr￼chte Indiens in ihrer geographischen Verbreitung,Feldfr￼chte,0,0
-164,The useful plants of India,Useful plants,0,0
-165,Bhāvaprakāśa,BhPr,0,13062
-166,Sanskṛt-English dictionary,MW,0,0
-167,Mayamata,MayaM,0,0
-168,Toḍalatantra,ToḍalT,0,5470
-175,Vṛkṣāyurveda,Das (1988),0,0
-176,Essays in early Indian architecture.,Coomaraswamy (1992),0,0
-177,"D￤cher, Decken und Gew￶lbe indischer Kultst￤tten und Nutzbauten.",Fischer (1974),0,0
-178,Die altindische Stadt,,0,0
-179,Les enseignements architecturaux de l'Ajitāgama et du Rauravāgama,Dagens (1977),0,0
-180,Paramānandīyanāmamālā,ParNāmMālā,0,211
-181,Padārthacandrikā,PadCandr,0,28
-182,Vidyādharas,,0,0
-183,Matsyapurāṇa,MPur,0,122639
-184,Rājamārtaṇḍa,RājMār,0,761
-186,Early Indian secular architecture,,0,0
-189,Hitopadeśa,Hitop,1,24961
-191,Kāvyādarśa,KāvĀ,0,4446
-192,Rasendracintāmaṇi,RCint,0,13321
-193,Ṛtusaṃhāra,ṚtuS,1,3130
-194,Kirātārjunīya,Kir,1,18410
-195,Tropical flowering plants,,0,0
-196,Rasasaṃketakalikā,RSK,0,4563
-199,Minerals and gems in Indian alchemy,,0,0
-202,History of chemistry in ancient and medieval India,,0,0
-203,Gmelins Handbuch der anorganischen Chemie,"Gmelin (Cu, B, 1)",0,0
-204,The International Plant Names Index (2004).,IPNI,0,0
-205,Gmelins Handbuch der anorganischen Chemie,"Gmelin (Hg, 1)",0,0
-206,British Eighteenth-Century Chemical Terms,,0,0
-207,Webmineral,,0,0
-208,Mindat,,0,0
-209,Gmelins Handbuch der anorganischen Chemie,Gmelin (As),0,0
-211,The Materia medica of the Hindus,Mat. Med.,0,0
-212,Rasakāmadhenu,RKDh,0,7894
-213,The Oxford Hindi-English dictionary,Hindi (McGregor),0,0
-214,T￶pferei und Tongeschirr im vedischen Indien,Rau (T￶pfe),0,0
-215,Rasendracūḍāmaṇi,RCūM,1,17923
-216,Rasārṇavam nāma rasatantram,,0,0
-219,Āyaraṅga,,0,0
-220,Kāvyālaṃkāra,KāvyAl,1,5614
-225,Kāvyālaṃkāravṛtti,,0,71
-226,Comm. on the Kāvyālaṃkāravṛtti,,0,393
-227,Saṅghabhedavastu,SBhedaV,0,7631
-228,Rasaratnasamuccayabodhinī,RRSBoṬ,0,6426
-233,2. fiktiver Komm. zum Hitopadeśa,,0,0
-234,Kāvyasaṃgraha,KāSaṃgr,0,0
-235,Bhramarāṣṭaka,,0,216
-236,Haṃsadūta,,0,2622
-237,Rasikasaṃjīvanī,RSaṃjīv,0,166
-238,Madanapālanighaṇṭu,MPālNigh,0,6183
-239,Vaikhānasagṛhyasūtra,VaikhGṛS,0,7759
-240,Vivāgasuyaṃ,,0,898
-241,Āyāracūlā,,0,860
-242,Anga Suttani,,0,0
-243,Gītagovinda,GītGov,1,6020
-244,Rasikapriyā,RasPr,0,346
-245,W￶rterbuch Ardhamāgadhī-Deutsch,,0,0
-246,Liṅgapurāṇa,LiPur,1,127418
-247,AMTest,,0,0
-248,The social and military position of the ruling caste in ancient India.,,0,0
-249,Die Lehre der Jainas,,0,0
-250,Meghadūta,Megh,1,3392
-251,Bhadrabāhucarita,,0,210
-252,Ueber die Entstehung der Śvetāmbara und Digambara Sekten,,0,0
-253,Der Jainismus,,0,0
-256,Kauśikasūtradārilabhāṣya,KDār,0,440
-257,Paṃcasuttaṃ,,0,2373
-258,Cakra (?) on Suśr,,0,165
-259,Hārāṇacandara on Suśr,,0,162
-260,Antagaḍadasāo,,0,6645
-261,Laṅkāvatārasūtra,LAS,0,13253
-262,An introduction to Buddhism.,,0,0
-263,Mūlamadhyamakārikāḥ,MMadhKār,0,2827
-264,Sarvāstivāda Buddhist scholasticism,,0,0
-265,Jaiminigṛhyasūtra,JaimGṛS,1,6780
-267,Balarāma im Mahābhārata,,0,0
-268,Miscellanea de operibus āyurvedicis,,0,0
-269,Miscellanea de operibus āyurvedicis (II),,0,0
-271,"On the identity of arka, an Āyurvedic class of medicines",,0,0
-272,On the Dravyaguṇasaṃgraha of Cakrapāṇidatta,,0,0
-273,Tṛtīyakaḥ phenakaḥ,,0,0
-274,Alchemy and sacred geography in medieval Deccan.,,0,0
-275,Aṣṭāṅgasaṃgraha,ASaṃ,0,2187
-276,Tapas und tapasvin in den erz￤hlenden Partien des Mahābhārata,,0,0
-277,Origin and tradition of alchemy,,0,0
-278,Pottery in Vedic literature,,0,0
-279,Das Rāmāyaṇa,,0,0
-280,Śārṅgadharasaṃhitā,ŚdhSaṃh,0,5623
-281,Śārṅgadharasaṃhitādīpikā,ŚSDīp,0,14764
-282,Gūḍhārthadīpikā,ŚGDīp,0,4822
-283,Some aspects of glass manufacturing in ancient India,,0,0
-284,The ghaṭikā of the twice-born in South Indian inscriptions,,0,0
-286,Panels of the VIIth World Sanskrit Conference,,0,0
-287,The constraints of theory in the evolution of nosological classifications,,0,0
-288,The Antagaḍa-Dasāo and Aṇuttarovavāiya-Dasāo,,0,0
-289,The heroic satī or the widow ascetic,,0,0
-290,An illustrated Ardhamagadhi dictionary,,0,0
-291,Exploration of underground water springs according to the ancient Hindus,,0,0
-292,Nāḍīparīkṣā,,1,1553
-293,Nāḍīvijñāna,,1,0
-294,Ānandakanda,ĀK,0,84032
-296,The origin of the life of a human being,,0,0
-297,"A history of Indian medical literature, I A",IndMedLit I A,0,0
-298,"An English Translation of the Sushruta Samhita, vol. I",,0,0
-299,Prasannapadā,,0,409
-300,Skandapurāṇa (Revākhaṇḍa),SkPur (Rkh),0,114026
-304,Viṃśatikākārikā,ViṃKār,0,342
-305,Viṃśatikāvṛtti,ViṃVṛtti,0,1854
-306,Kālikāpurāṇa,KālPur,0,4091
-307,Worship of the goddess according to the Kālikāpurāṇa,,0,0
-308,Vāgbhaṭas's Aṣṭāṅgahṛdayasaṃhitā,,0,0
-309,An English translation of the Suśrutasaṃhitā,,0,0
-310,Ratna Dīpikā and Ratna Śāstram,,0,0
-311,Ratnadīpikā,,0,1511
-312,Pāraskaragṛhyasūtra,,0,661
-313,Hiraṇyakeśigṛhyasūtra,,0,1154
-314,Rasaprakāśasudhākara,RPSudh,0,15616
-315,Rasamañjarī,RMañj,0,12588
-316,Khādiragṛhyasūtra,KhGṛS,0,1999
-317,Khādiragṛhyasūtrarudraskandavyākhyā,,0,172
-318,Āpastambagṛhyasūtra,ĀpGṛSū,1,3120
-319,Āśvalāyanagṛhyasūtra,ĀśGS,0,1088
-320,Rasendrasārasaṃgraha,RSS,0,5676
-321,Yogaratnākara,YRā,0,6478
-322,Rasārṇavam nāma rasatantram,RasArṇ (2),0,0
-323,Vetālapañcaviṃśatikā,VetPV,0,977
-324,Rasaratnasamuccayaṭīkā,RRSṬīkā,0,12167
-325,Pāradasaṃhitā,,0,0
-326,Rasaprakāśasudhākara,RPrSudh2,0,0
-327,Indu (ad AHS),,0,18
-328,Rasaratnākara Ṛddhikhaṇḍa,RRĀṚddhi,0,0
-329,Bhāradvājagṛhyasūtra,BhārGS,0,504
-330,Baudhāyanagṛhyasūtra,BaudhGS,0,2649
-331,Rasaratnākara Rasakhaṇḍa,RRĀ Rasakhaṇḍa,0,0
-332,Kaiyadevanighaṇṭu,KaiNigh,0,1827
-333,Dhanvantarinighaṇṭu,DhanvNigh,0,6939
-334,Rasataraṅgiṇī,RTar,0,2684
-335,A concise history of science in India,,0,0
-336,Gokarṇapurāṇasāraḥ,GokPurS,1,14689
-338,Viṣṇusmṛti,ViSmṛ,0,19199
-342,Varāhapurāṇa,VarPur,0,621
-343,Gṛhastharatnākara,GṛRĀ,0,1539
-344,Śivapurāṇa,ŚivaPur,0,827
-345,Parāśaradharmasaṃhitā,ParDhSmṛti,1,8178
-346,Parāśarasmṛtiṭīkā,,0,7558
-347,Kāmasūtra,KāSū,1,18841
-349,"A history of Indian medical literature, II B",IndMedLit II B,0,0
-350,Kūrmapurāṇa,KūPur,1,81775
-351,Sūryaśataka,SūryaŚ,0,593
-352,Sūryaśatakaṭīkā,,0,2322
-353,Śāṅkhāyanagṛhyasūtra,ŚGṛS,0,750
-354,Arthaśāstra,ArthaŚ,0,19434
-355,The Arthaśāstra,Arthaśāstra (Rangarajan),0,0
-356,Nāṭyaśāstra,NāṭŚ,0,7844
-357,Nāṭyaśāstravivṛti,NŚVi,0,2585
-358,Kurzgefa￟tes W￶rterbuch ...,Mayrhofer,0,0
-359,Sāṃkhyakārikā,SāṃKār,1,1067
-360,Rasaratnasamuccayadīpikā,RRSDīp,0,82
-361,Mānavagṛhyasūtra,MānGS,0,82
-362,Kāṭhakagṛhyasūtra,KāṭhGṛSū,0,177
-363,Sāṃkhyakārikābhāṣya,SKBh,0,9956
-364,Les Strophes de Sāṃkhya (Sāṃkhyakārikā),,0,0
-365,Chāndogyopaniṣad,ChāUp,1,15571
-366,Śvetāśvataropaniṣad,ŚvetāśvUp,1,2100
-367,Nirukta,,0,807
-368,The Nighaṇṭu and the Nirukta,,0,0
-369,Vaiśeṣikasūtra,VaiśSū,0,2120
-371,Vaiśeṣikasūtravṛtti,VaiSūVṛ,0,8649
-372,Vācaspatimiśras Tattvakaumudī,,0,0
-373,Sāṃkhyatattvakaumudī,STKau,0,5849
-374,Der Mondschein der Sāṃkhya-Wahrheit in deutscher ￜbersetzung,,0,0
-375,Dhanurveda,DhanV,1,3139
-376,Buddhacarita,BCar,1,19020
-378,Abhidharmakośa,AbhidhKo,0,1331
-379,Abhidharmakośabhāṣya,AbhidhKoBh,0,107
-380,Sphuṭārthāvyākhyā,,0,358
-381,Yogasūtrabhāṣya,YSBhā,0,9977
-382,Nyāyasūtra,NyāSū,1,3335
-383,Nyāyasūtra,,0,0
-384,Nyāyabhāṣya,NyāBh,0,952
-385,Yājñavalkyasmṛti,YāSmṛ,1,14206
-386,Nighaṇṭuśeṣa,NighŚeṣa,0,2003
-388,Agnipurāṇa,AgniPur,0,8333
-390,Kumārasaṃbhava,KumSaṃ,1,10237
-391,Tantrākhyāyikā,TAkhy,1,8303
-392,Daśakumāracarita,DKCar,1,35081
-393,Gautamadharmasūtra,GautDhS,1,5615
-394,Śatapathabrāhmaṇa,ŚpBr,0,3718
-395,Kṛṣiparāśara,KṛṣiPar,1,3860
-396,Trikāṇḍaśeṣa,TriKŚ,0,904
-397,Kranich und Reiher im Sanskrit,,0,0
-398,Abhinavacintāmaṇi,ACint,0,2605
-399,Mahācīnatantra,,0,546
-400,Viṣṇupurāṇa,ViPur,0,87528
-401,Kaulāvalīnirṇaya,,0,0
-402,Baudhāyanadharmasūtra,BaudhDhSū,0,1681
-403,Tattvavaiśāradī,,0,203
-405,Bṛhatkathāślokasaṃgraha,BKŚS,1,62095
-406,Kātyāyanasmṛti,KātySmṛ,1,14268
-407,Haṃsasaṃdeśa,,0,620
-408,Tantrāloka,TĀ,0,41268
-409,Tarkasaṃgraha,,1,1967
-410,Nāradasmṛti,NāSmṛ,1,13278
-411,Garuḍapurāṇa,GarPur,0,75648
-412,Kāśikāvṛtti,,0,2859
-413,Aṣṭādhyāyī,,1,15461
-414,La Kāśikā-vṛtti,,1,0
-415,Acintyastava,,1,894
-416,Pāṇini's Grammatik,Pāṇini (B￶htlingk),0,0
-418,Aṣṭādhyāyī of Pāṇini,Katre (1987),0,0
-420,Aṣṭāvakragīta,,1,4553
-421,Aitareyopaniṣad,AitUp,1,843
-423,Kṛṣṇāmṛtamahārṇava,KAM,1,3300
-424,Nyāyabindu,NyāBi,0,159
-425,Haribhaktivilāsa,HBhVil,0,28839
-426,Śyainikaśāstra,,1,5272
-427,Translation of Gītā,,0,0
-430,Narmamālā,KṣNarm,1,5579
-431,Āryāsaptaśatī,Āsapt,1,11798
-433,Devīkālottarāgama,DevīĀgama,1,1258
-434,Saṃvitsiddhi,SaṃSi,0,3398
-435,Pañcaviṃśabrāhmaṇa,PB,0,28712
-436,Śukasaptati,Śusa,0,9670
-437,Caurapañcaśikā,CauP,1,1183
-438,Paraśurāmakalpasūtra,,0,1722
-439,Bṛhadāraṇyakopaniṣad,BĀU,1,18824
-440,Śāṅkhāyanāraṇyaka,ŚāĀr,1,12701
-441,Mukundamālā,MukMā,1,908
-442,Bhallaṭaśataka,BhallŚ,1,2809
-443,Pavanadūta,PavDū,0,0
-444,Kokilasaṃdeśa,KokSam,1,4640
-445,Śatakatraya,ŚTr,1,8688
-446,Bhāratamañjarī,BhāMañj,0,85577
-447,An Index to the Names in the Mahābhārata,S￶rensen,0,0
-448,Petersburger W￶rterbuch,PeW￶,0,0
-449,Abhidhānacintāmaṇi,AbhCint,0,4326
-450,Ṛgveda,ṚV,1,170860
-451,Der Rig-Veda. Aus dem Sanskrit ins Deutsche ￼bersetzt,,0,0
-452,A Vedic Grammar for Students,,0,0
-453,W￶rterbuch des Ṛigveda,,0,0
-454,Devīmāhātmya,,0,24
-455,Narasiṃhapurāṇa,NarasiṃPur,0,503
-456,Kathāsaritsāgara,KSS,0,66536
-457,Kaṭhopaniṣad,KaṭhUp,1,2120
-458,Muṇḍakopaniṣad,MuṇḍUp,1,1300
-459,Kauṣītakyupaniṣad,KauṣUp,0,747
-460,Taittirīyopaniṣad,TaittUp,0,407
-461,"Upaniṣads, ￜbersetzung",,0,0
-462,Harṣacarita,,0,41
-463,Saundarānanda,SaundĀ,1,18988
-464,Atharvaveda (Śaunaka),AVŚ,0,52931
-465,Atharva-Veda Saṃhitā,Whitney and Lanman 1905,0,0
-466,Avadānaśataka,AvŚat,0,19819
-467,Aṣṭasāhasrikā,ASāh,0,43182
-469,Buddhist Hybrid Sanskrit,,0,0
-470,Śikṣāsamuccaya,ŚiSam,0,791
-471,Aitareyabrāhmaṇa,AitBr,0,45709
-472,Rigveda Brahmanas,,0,0
-473,Divyāvadāna,Divyāv,0,67405
-474,Etymologisches W￶rterbuch des Altindoarischen,,0,0
-475,The Rigveda. The earliest religious poetry of India,Jamison and Brereton (2014),0,0
-476,"Viṣkali-, Name of an Accouching Deity",,0,0
-477,Hymns of the Atharva-Veda,"Bloomfield (1897, Hymns AV)",0,0
-478,The Early Upaniṣadas,,0,0
-479,Jaiminīyabrāhmaṇa,JB,0,2531
-480,Das Jaiminīya-Brāhmaṇa in Auswahl,Caland 1919 [Jaiminīyabr.],0,0
-481,W￶rterbuch des altindischen Rituals,Mylius 1995 [Ritual],0,0
-482,"Sanskritischer Index der jungvedischen Namen und Sachen, Teil II",Mylius 1977 [SansIx II],0,0
-483,The Vocabulary of the Rāmāyaṇa,,0,0
-484,Nachtrag zum W￶rterbuch des altindischen Rituals,Mylius 2000 [Nachtrag],0,0
-485,Nachtragsw￶rterbuch des Sanskrit,NWS (Schmidt),0,0
-486,"King, Governance and Law in Ancient India",Olivelle 2013 [King],0,0
-487,OH meanings,OH meanings,0,0
-488,Der Rigveda in Auswahl. Erster Teil: Glossar,Geldner [RV Auswahl],0,0
-489,Lalitavistara,LalVis,0,25222
-490,A Sanskrit Dictionary of Law and Statescraft,"Olivelle 2015 [Law, Statescraft]",0,0
-491,Remarkable words from the Kāvyamīmāṃsā,Renou 1956 [Kāvyamī.],0,0
-492,Ein buddhistisches Yogalehrbuch,Schlingloff 1964 [Yoga],0,0
-493,Index of Viṃśatikā and Triṃśatikā,Bareau 1953 [Index],0,0
-494,Indian Epigraphical Glossary,Sircar 1966 [Epigraphy],0,0
-495,Baudhāyanaśrautasūtra,BaudhŚS,0,938
-496,The Kauṭilīya Arthaśāstra,"Kangle (1969, Arthaśāstra)",0,0
-497,Ṛgvedakhilāni,ṚVKhil,0,1317
-498,Encyclopaedia of Indian Temple Architecture. North India. Foundations of North Indian Style c. 250 B.C. - A.D. 1100,Meister 1988 [Temple Architecture],0,0
-499,Maitrāyaṇīsaṃhitā,MS,0,5664
-500,Das altindische Buch vom Welt- und Staatsleben,Meyer 1926 [Arthaśāstra],0,0
-501,Vedachrestomathie,Hillebrandt 1885 [Vedachrestomathie],0,0
-502,Atharvaprāyaścittāni,AVPr,0,517
-503,Gopathabrāhmaṇa NEW,GB,0,7469
-504,Āpastambaśrautasūtra,ĀpŚS,0,861
-505,"Sanskritischer Index der jungvedischen Namen und Sachen, Teil I",Mylius 1976 [SansIx 1],0,0
-506,Allgemeine Geschichte der Philosophie,Deussen 1894,0,0
-507,"Atharvaveda-Paippalāda, Kāṇḍa Five",Lubotsky 2002,0,0
-508,Āśvālāyanaśrautasūtra,ĀśŚS,0,0
-509,Kātyāyanaśrautasūtra,KātyŚS,0,106
-510,Taittirīyasaṃhitā,TS,0,1941
-511,The Śatapatha Brāhmaṇa According to the Text of the Mādhyandina Recension,Eggeling 1894 [ŚB],0,0
-512,Rivelex: Rigveda-Lexikon,Krisch 2006 [Rivelex],0,0
-513,Das Śrautasūtra des Āpastamba,Caland 1928 [ĀpŚS tr.],0,0
-514,The Veda of the Black Yajus School,"Keith [1914, TS transl.]",0,0
-515,Atharvavedapariśiṣṭa,AVPariś,0,63
+id,textname
+1,Gheraṇḍasaṃhitā
+5,Suśrutasaṃhitā
+8,Sūryasiddhānta
+11,Agastīyaratnaparīkṣā
+12,Rājanighaṇṭu
+13,Mātṛkābhedatantra
+14,Aṣṭāṅgahṛdayasaṃhitā
+21,Aṣṭāṅganighaṇṭu
+26,Mṛgendratantra
+27,Mṛgendraṭīkā
+28,Gaṇakārikā
+29,Ratnaṭīkā
+33,Ṛgvedavedāṅgajyotiṣa
+38,Tantrasāra
+40,Maṇimāhātmya
+42,Bhairavastava
+44,Śivasūtra
+45,Śivasūtravārtika
+48,Spandakārikā
+49,Spandakārikānirṇaya
+51,Smaradīpikā
+52,Yogasūtra
+57,Rasaratnākara
+58,Carakasaṃhitā
+59,Amaraughaśāsana
+63,Vātūlanāthasūtras
+64,Vātūlanāthasūtravṛtti
+67,Kādambarīsvīkaraṇasūtramañjarī
+69,Sātvatatantra
+70,Janmamaraṇavicāra
+71,Kauśikasūtra
+72,Uḍḍāmareśvaratantra
+75,Ṭikanikayātrā
+81,Gorakṣaśataka
+84,Amarakośa
+85,Haṭhayogapradīpikā
+91,Manusmṛti
+95,Pāśupatasūtra
+96,Pañcārthabhāṣya
+109,Śira'upaniṣad
+110,Garbhopaniṣat
+111,Nādabindūpaniṣat
+112,Brahmabindūpaniṣat
+113,Amṛtabindūpaniṣat
+118,Bījanighaṇṭu
+119,Bhāgavatapurāṇa
+120,Bodhicaryāvatāra
+125,Vaikhānasadharmasūtra
+126,Rasādhyāya
+127,Rasādhyāyaṭīkā
+129,Śāktavijñāna
+130,Vārāhagṛhyasūtra
+131,Amaruśataka
+136,Gobhilagṛhyasūtra
+137,Vṛddhayamasmṛti
+139,Rasārṇavakalpa
+140,Skandapurāṇa
+142,Rasārṇava
+143,Rāmāyaṇa
+145,Sarvadarśanasaṃgraha
+148,Āyurvedadīpikā
+149,Rasaratnasamuccaya
+154,Mahābhārata
+160,Rasahṛdayatantra
+161,Mugdhāvabodhinī
+165,Bhāvaprakāśa
+168,Toḍalatantra
+180,Paramānandīyanāmamālā
+183,Matsyapurāṇa
+184,Rājamārtaṇḍa
+189,Hitopadeśa
+191,Kāvyādarśa
+192,Rasendracintāmaṇi
+193,Ṛtusaṃhāra
+194,Kirātārjunīya
+196,Rasasaṃketakalikā
+212,Rasakāmadhenu
+215,Rasendracūḍāmaṇi
+220,Kāvyālaṃkāra
+225,Kāvyālaṃkāravṛtti
+227,Saṅghabhedavastu
+228,Rasaratnasamuccayabodhinī
+235,Bhramarāṣṭaka
+236,Haṃsadūta
+237,Rasikasaṃjīvanī
+238,Madanapālanighaṇṭu
+239,Vaikhānasagṛhyasūtra
+243,Gītagovinda
+244,Rasikapriyā
+246,Liṅgapurāṇa
+250,Meghadūta
+251,Bhadrabāhucarita
+256,Kauśikasūtradārilabhāṣya
+261,Laṅkāvatārasūtra
+263,Mūlamadhyamakārikāḥ
+265,Jaiminigṛhyasūtra
+275,Aṣṭāṅgasaṃgraha
+280,Śārṅgadharasaṃhitā
+281,Śārṅgadharasaṃhitādīpikā
+282,Gūḍhārthadīpikā
+292,Nāḍīparīkṣā
+294,Ānandakanda
+299,Prasannapadā
+300,Skandapurāṇa (Revākhaṇḍa)
+304,Viṃśatikākārikā
+305,Viṃśatikāvṛtti
+306,Kālikāpurāṇa
+311,Ratnadīpikā
+312,Pāraskaragṛhyasūtra
+313,Hiraṇyakeśigṛhyasūtra
+314,Rasaprakāśasudhākara
+315,Rasamañjarī
+316,Khādiragṛhyasūtra
+318,Āpastambagṛhyasūtra
+319,Āśvalāyanagṛhyasūtra
+320,Rasendrasārasaṃgraha
+321,Yogaratnākara
+323,Vetālapañcaviṃśatikā
+324,Rasaratnasamuccayaṭīkā
+329,Bhāradvājagṛhyasūtra
+330,Baudhāyanagṛhyasūtra
+332,Kaiyadevanighaṇṭu
+333,Dhanvantarinighaṇṭu
+334,Rasataraṅgiṇī
+336,Gokarṇapurāṇasāraḥ
+338,Viṣṇusmṛti
+342,Varāhapurāṇa
+343,Gṛhastharatnākara
+344,Śivapurāṇa
+345,Parāśaradharmasaṃhitā
+346,Parāśarasmṛtiṭīkā
+347,Kāmasūtra
+350,Kūrmapurāṇa
+351,Sūryaśataka
+352,Sūryaśatakaṭīkā
+353,Śāṅkhāyanagṛhyasūtra
+354,Arthaśāstra
+356,Nāṭyaśāstra
+357,Nāṭyaśāstravivṛti
+359,Sāṃkhyakārikā
+360,Rasaratnasamuccayadīpikā
+361,Mānavagṛhyasūtra
+362,Kāṭhakagṛhyasūtra
+363,Sāṃkhyakārikābhāṣya
+365,Chāndogyopaniṣad
+366,Śvetāśvataropaniṣad
+367,Nirukta
+369,Vaiśeṣikasūtra
+371,Vaiśeṣikasūtravṛtti
+373,Sāṃkhyatattvakaumudī
+375,Dhanurveda
+376,Buddhacarita
+378,Abhidharmakośa
+380,Sphuṭārthāvyākhyā
+381,Yogasūtrabhāṣya
+382,Nyāyasūtra
+384,Nyāyabhāṣya
+385,Yājñavalkyasmṛti
+386,Nighaṇṭuśeṣa
+388,Agnipurāṇa
+390,Kumārasaṃbhava
+391,Tantrākhyāyikā
+392,Daśakumāracarita
+393,Gautamadharmasūtra
+394,Śatapathabrāhmaṇa
+395,Kṛṣiparāśara
+396,Trikāṇḍaśeṣa
+398,Abhinavacintāmaṇi
+399,Mahācīnatantra
+400,Viṣṇupurāṇa
+402,Baudhāyanadharmasūtra
+403,Tattvavaiśāradī
+405,Bṛhatkathāślokasaṃgraha
+406,Kātyāyanasmṛti
+407,Haṃsasaṃdeśa
+408,Tantrāloka
+409,Tarkasaṃgraha
+410,Nāradasmṛti
+411,Garuḍapurāṇa
+412,Kāśikāvṛtti
+413,Aṣṭādhyāyī
+415,Acintyastava
+420,Aṣṭāvakragīta
+421,Aitareyopaniṣad
+423,Kṛṣṇāmṛtamahārṇava
+424,Nyāyabindu
+425,Haribhaktivilāsa
+426,Śyainikaśāstra
+430,Narmamālā
+431,Āryāsaptaśatī
+433,Devīkālottarāgama
+434,Saṃvitsiddhi
+435,Pañcaviṃśabrāhmaṇa
+436,Śukasaptati
+437,Caurapañcaśikā
+438,Paraśurāmakalpasūtra
+439,Bṛhadāraṇyakopaniṣad
+440,Śāṅkhāyanāraṇyaka
+441,Mukundamālā
+442,Bhallaṭaśataka
+444,Kokilasaṃdeśa
+445,Śatakatraya
+446,Bhāratamañjarī
+449,Abhidhānacintāmaṇi
+450,Ṛgveda
+454,Devīmāhātmya
+455,Narasiṃhapurāṇa
+456,Kathāsaritsāgara
+457,Kaṭhopaniṣad
+458,Muṇḍakopaniṣad
+459,Kauṣītakyupaniṣad
+460,Taittirīyopaniṣad
+462,Harṣacarita
+463,Saundarānanda
+464,Atharvaveda (Śaunaka)
+466,Avadānaśataka
+467,Aṣṭasāhasrikā
+468,Atharvaveda (Paippalāda)
+470,Śikṣāsamuccaya
+471,Aitareyabrāhmaṇa
+473,Divyāvadāna
+479,Jaiminīyabrāhmaṇa
+489,Lalitavistara
+495,Baudhāyanaśrautasūtra
+497,Ṛgvedakhilāni
+499,Maitrāyaṇīsaṃhitā
+502,Atharvaprāyaścittāni
+503,Gopathabrāhmaṇa
+504,Āpastambaśrautasūtra
+508,Āśvālāyanaśrautasūtra
+509,Kātyāyanaśrautasūtra
+510,Taittirīyasaṃhitā
+515,Atharvavedapariśiṣṭa
+516,Jaiminīya-Upaniṣad-Brāhmaṇa
+519,Kauṣītakibrāhmaṇa
+523,Vājasaneyisaṃhitā (Mādhyandina)
+526,Taittirīyabrāhmaṇa
+532,Saddharmapuṇḍarīkasūtra
+535,Vaitānasūtra
+538,Bhāradvājaśrautasūtra
+540,Kauṣītakagṛhyasūtra
+542,Kauśikasūtrakeśavapaddhati
+543,Kāṭhakasaṃhitā
+546,Taittirīyāraṇyaka
+547,Śāṅkhāyanaśrautasūtra
+550,Āpastambadharmasūtra
+552,Ṛgvidhāna
+553,Vaikhānasaśrautasūtra
+555,Aitareya-Āraṇyaka
+556,Drāhyāyaṇaśrautasūtra
+558,Sāmavidhānabrāhmaṇa
+559,Vasiṣṭhadharmasūtra
+561,Kaṭhāraṇyaka
